@@ -1,0 +1,7 @@
+lamborgini-update 1
+version=1.0.0
+min=0
+file=LamborGiniTool.exe
+sha256=5f2191efd877cc6b7592d00e91706e7f5665dc6526507692bdba986fefdf89e3
+size=8592384
+note=First release
