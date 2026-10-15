@@ -1,7 +1,7 @@
 lamborgini-update 1
-version=1.0.0
+version=1.0.1
 min=0
 file=LamborGiniTool.exe
-sha256=5f2191efd877cc6b7592d00e91706e7f5665dc6526507692bdba986fefdf89e3
-size=8592384
-note=First release
+sha256=8b0e840524f1715367bf6880cabc8e674e6a82f90bf82afb6a7f8fbceafb8928
+size=8676352
+note=New Diagnosis and Setup page, power button fix and more.
