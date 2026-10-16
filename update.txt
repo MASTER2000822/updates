@@ -1,7 +1,12 @@
 lamborgini-update 1
-version=1.0.2
+version=1.1.0
 min=0
 file=LamborGiniTool.exe
-sha256=53e6a88d6f7d84c306308044238d0f4276fde2ed6fe2f19b300497e90c3419e8
-size=8679424
-note=Update check fixed, faster update detection.
+sha256=da823b0d7a24b0c9332ded26f205e4753ec8f75f2638b5f2d50bfb24a9089433
+size=16300544
+note=New settings page for the new GameLoop (Performance, Display, Sound, File, Basic) and a redesigned one for the classic GameLoop.
+note=App menu: Import keymap, High / Mobile Resolution and Unlock 120 FPS for PUBG MOBILE versions, shortcuts, hide and show for Play Store and Settings.
+note=Keymaps for both GameLoops are now inside the app: no internet needed to apply them.
+note=Turns adb on inside the new GameLoop by itself; faster installs; Install and Merge for APK + OBB.
+note=Purge for the new GameLoop (drive C: only), restore GameLoop database to default, and the Close button now also ends the leftover virtual machine.
+note=New popup messages, EmuDesk-style purple look, and many fixes.
