@@ -1,7 +1,8 @@
 lamborgini-update 1
-version=1.2.1
+version=1.2.6
 min=0
 file=LamborGiniTool.exe
-sha256=4fbd195be4870ba09377ace0d45a24eed63f867a62f5d339317afe63aeb90b2c
-size=19163648
-note=The Settings Check for updates button now downloads and installs verified updates directly.
+sha256=8163e87041d36a6d35271b41a7228e429b5b4f5ce626a27d3ad02bb15a08467e
+size=19165696
+note=Restores Windows-native minimize and restore transitions from version 1.2.2.
+note=Keeps the Tuning page startup and responsiveness improvements.
