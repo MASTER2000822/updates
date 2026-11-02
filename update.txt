@@ -1,11 +1,7 @@
 lamborgini-update 1
-version=1.2.0
+version=1.2.1
 min=0
 file=LamborGiniTool.exe
-sha256=c9df3a31603327fdcd1f12c577d1f6fb44a49e0620951f1f6c7f0728cc9cdb82
-size=19171328
-note=Rebuilt the whole tool from the ground up (Rust, not the old C++/ImGui build) - same features, faster and sturdier.
-note=The in-game FPS card now reads the game's own real frame rate on both the new and the classic GameLoop, not just your monitor's refresh rate.
-note=Enhancing (sharpen/clarity/AA) moved to Windows.Graphics.Capture: fixes the black screen some PCs got with the old method, and the improved picture now shows up in recordings and streams too.
-note=The window and the on-screen overlay cards now scale to fit your screen's own resolution.
-note=Many smaller fixes.
+sha256=4fbd195be4870ba09377ace0d45a24eed63f867a62f5d339317afe63aeb90b2c
+size=19163648
+note=The Settings Check for updates button now downloads and installs verified updates directly.
