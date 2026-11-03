@@ -1,8 +1,15 @@
 lamborgini-update 1
-version=1.2.6
+version=1.6.1
 min=0
 file=LamborGiniTool.exe
-sha256=8163e87041d36a6d35271b41a7228e429b5b4f5ce626a27d3ad02bb15a08467e
-size=19165696
-note=Restores Windows-native minimize and restore transitions from version 1.2.2.
-note=Keeps the Tuning page startup and responsiveness improvements.
+sha256=c9d3f8f30450bd2783de608fcaabf7ba9e237df6d349aff26f1cea4271d866c3
+size=19479040
+note=Frame generation, in Enhancing: pictures are put between the ones the game draws. The tool works out the movement between two finished pictures and builds the ones in between, so the motion on screen is smoother than the rate the emulator is actually drawing at. It is the tool's own, it runs on any card, and it never starts or changes anything in the game.
+note=It is built to look real rather than merely smooth: where the two pictures cannot be reconciled - something uncovered from behind something else, a cut, a flash - the newer picture is shown instead of an invented one, and an invented pixel can never leave the range of the two real pixels it came from. That is what stops the ghosting and the bright halos of cheap frame generation.
+note=A picture that is not moving costs nothing at all: menus, the map and a paused game are handed back untouched. And with frame generation off, the enhancer costs exactly what it did before - no extra texture, no extra copy of the screen, no extra memory.
+note=New "Extra sharpness - NVIDIA style" in Enhancing, Fine tuning: the same idea as the sharpening in NVIDIA's driver panel, worked out by the tool, so it also runs on an Intel Arc or an AMD card - those drivers have no such setting at all. Each pixel is pushed away from its neighbours and then held inside the range they already had, which is what makes an edge crisp with no white halo and no dark outline.
+note=New "Realistic" look above the four presets in Enhancing: the detail is rebuilt (FSR 1), the game's textures get 16x filtering, the banding in skies and shadows is broken up - and no second smoothing pass is put on top of it, because a smoother edge and a softer picture are not the same thing.
+note=The always-on-top switch now works in both directions, and the "always on top and nothing stops it" problem is gone: the switch was looking for the wrong program name, so on the Ex engine it never found the window at all. Off now means the window is taken out of the topmost band and held out, because GameLoop's own pin puts it back whenever it makes a new window.
+note=Game Booster: two small boxes, En and Ex, say which emulator window the boost is prepared for. They are a declaration and nothing else - ticking one never opens the game, and while one is ticked the boost prepares everything and leaves the opening to you.
+note=Game Booster: the OPTIMIZE button is a modest circle now instead of filling half the card, and the boxes above it line up with each other.
+note=Game Booster, the left column under the button: the sentence and the three cards are now placed from one measurement, so the first card can no longer be drawn over the last line of the sentence. Inside each card the small label and the big number share one line, the two grey lines under them share one line, and the caption on the left no longer prints through the unit on its right.
