@@ -1,7 +1,7 @@
 lamborgini-update 1
 version=1.8.0
 min=0
-file=LamborGiniTool-1.8.0-439712e9.exe
+file=LamborGiniTool.exe
 sha256=439712e9f3d6def32cc4c9f60040b2da5804bddd5fe4d5fe7248986fef28f673
 size=13527040
 note=The tool is now a native Windows program (Direct2D). It starts faster, uses less memory and its pages animate smoothly.
