@@ -1,9 +1,9 @@
 lamborgini-update 1
-version=2.0.2
+version=2.0.5
 min=0
 file=LamborGiniTool.exe
-sha256=887d390ac8a8f7d842f2bc68173dc7c3df49c83d114f5b48ab19d2b8bbaf25a8
-size=13680128
+sha256=0435c7301869847b04e6d7e0fe4ae032265c8b32072cbc812e295ff71d1a2883
+size=13685760
 note=The tool is now a native Windows program (Direct2D). It starts faster, uses less memory and its pages animate smoothly.
 note=Device: a new engine sidebar that slides out beside the window, a redesigned Enhancing page (picture enhancer with SuperScale and frame generation), a redesigned Alterations page, an In-Game Editor for the classic and the new GameLoop, a file manager in Side-loading that works without GameLoop, and a right-click menu in the Library.
 note=New glass notifications: a progress card for running jobs and a message card for results.
