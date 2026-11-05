@@ -1,9 +1,9 @@
 lamborgini-update 1
-version=2.0.8
+version=2.0.20
 min=0
 file=LamborGiniTool.exe
-sha256=8996378639012035f8c0be66d7e79e7b75a88a3933f665b5afb6ebf55e8c6edd
-size=13731328
-note=Version 2.0.8: stronger protection against tampering and analysis tools, with a clear message instead of starting when something is detected.
-note=The window and everything in it now size themselves for any monitor - low or high resolution and any Windows display scaling - and re-fit when moved to another screen, so nothing overlaps or goes off-screen.
-note=Polish: working taskbar preview, larger readable text, smoother window dragging, a faster In-Game Editor and properly rounded corners.
+sha256=8ae6d63799384f20f7bc03748b995e052820feb32452b473169779ff27cfd25b
+size=13740544
+note=GameLoop confirmation dialogs now measure wrapped text and size action buttons to their labels.
+note=Shared pill buttons fit long labels inside their bounds.
+note=Device engine rail docking edge mapping is corrected and animated.
