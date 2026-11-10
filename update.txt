@@ -1,10 +1,16 @@
 lamborgini-update 1
-version=3.0.1
+version=3.0.3
 min=0
 file=LamborGiniTool.exe
-sha256=801ac98a5226618cd3fa2f643d805313f6fbf4a53b7d1b86559ab82ddae1f6d8
-size=10262016
-note=A failed start after the update was copied is no longer silent: the tool now says it could not start and names the file to open instead.
+sha256=852b30eed0cf8182d08d84d3383625e2d323080aad74801f2266fb8aba45c081
+size=11051008
+note=Added: a crash note. If the tool fails while starting, it now writes crash.txt next to the exe with the version, the start-up step it stopped on, the exception code and the faulting module, and says so in a message box. Send that file with any report - before this, "it does not open" left nothing behind to look at.
+note=Fixed: installing the picture layer could record another program's proxy as GameLoop's original. On a PC that had TAC Panel Loop installed first, the DLL that Restore put back was TAC's hook, not GameLoop's own, and nothing said so. The original now comes from GameLoop's own component cache, and a file only counts as one if it carries ANGLE's version resource - no proxy does.
+note=If another program's proxy is installed and GameLoop's copy of it cannot be found, the picture layer now says so and stops, instead of installing over it and destroying the only way back.
+note=The FPS counter is just the counter: the number in NVIDIA green with its unit beside it, and nothing else. The box, the frame-time graph and the CPU row are gone.
+note=The digits are drawn with a real antialiased font at the exact size of your frame, so they stay sharp at 720p, 1080p and 1440p instead of turning into blocks.
+note=Fixed: copying a file from one folder on the device to another folder on the device copied nothing and said it had failed. It copies the file now.
+note=Fixed: a copy inside the device now shows in the transfer bar with a Cancel button, like a send or a fetch does.
+note=The tool no longer needs the Visual C++ Redistributable. 3.0.0 imported VCRUNTIME140.dll and MSVCP140.dll, which Windows does not ship, so on a PC without it the tool did not start at all - that is what "updated but will not open" was.
+note=A failed start after the update was copied is no longer silent: the tool says it could not start and names the file to open instead.
 note=The final start falls back to the Windows "runas" verb, so an update that finishes without administrator rights can still open the tool.
-note=If the update cannot be put in place at all, the message says where the downloaded copy is instead of closing without a word.
-note=Startup failures now explain themselves: a missing or refused OpenGL context shows a message instead of a window that never appears.
