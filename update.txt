@@ -1,13 +1,10 @@
 lamborgini-update 1
-version=3.0.0
+version=3.0.1
 min=0
 file=LamborGiniTool.exe
-sha256=aa89a9fb534ff7aadd544d5cc132b065874480c271d216500d83c677030e524a
-size=10257920
-note=LamborGini 3.0.0 - the new tool. Existing installs of 2.x are offered this update and replace themselves.
-note=Picture settings apply live, mid-match: Smart scaling, Anti-aliasing, Sharpness, Texture filtering, V-sync and Frame generation.
-note=Frame generation now switches V-sync off in the same gesture, because the proxy cannot add frames while the swap waits for a vblank.
-note=The FPS overlay reports the rate the display is being fed, generated frames included.
-note=Optimise no longer restarts a running game to write its graphics settings.
-note=A settings lock that silently reverted other launchers' Configs.db writes has been removed, so detection-bypass launchers can install their config and keymap again.
-note=The gear menu's Check for update opens and stays open.
+sha256=801ac98a5226618cd3fa2f643d805313f6fbf4a53b7d1b86559ab82ddae1f6d8
+size=10262016
+note=A failed start after the update was copied is no longer silent: the tool now says it could not start and names the file to open instead.
+note=The final start falls back to the Windows "runas" verb, so an update that finishes without administrator rights can still open the tool.
+note=If the update cannot be put in place at all, the message says where the downloaded copy is instead of closing without a word.
+note=Startup failures now explain themselves: a missing or refused OpenGL context shows a message instead of a window that never appears.
