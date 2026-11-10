@@ -1,9 +1,13 @@
 lamborgini-update 1
-version=2.0.20
+version=3.0.0
 min=0
 file=LamborGiniTool.exe
-sha256=8ae6d63799384f20f7bc03748b995e052820feb32452b473169779ff27cfd25b
-size=13740544
-note=GameLoop confirmation dialogs now measure wrapped text and size action buttons to their labels.
-note=Shared pill buttons fit long labels inside their bounds.
-note=Device engine rail docking edge mapping is corrected and animated.
+sha256=aa89a9fb534ff7aadd544d5cc132b065874480c271d216500d83c677030e524a
+size=10257920
+note=LamborGini 3.0.0 - the new tool. Existing installs of 2.x are offered this update and replace themselves.
+note=Picture settings apply live, mid-match: Smart scaling, Anti-aliasing, Sharpness, Texture filtering, V-sync and Frame generation.
+note=Frame generation now switches V-sync off in the same gesture, because the proxy cannot add frames while the swap waits for a vblank.
+note=The FPS overlay reports the rate the display is being fed, generated frames included.
+note=Optimise no longer restarts a running game to write its graphics settings.
+note=A settings lock that silently reverted other launchers' Configs.db writes has been removed, so detection-bypass launchers can install their config and keymap again.
+note=The gear menu's Check for update opens and stays open.
