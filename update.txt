@@ -1,16 +1,14 @@
 lamborgini-update 1
-version=3.0.3
+version=3.0.4
 min=0
 file=LamborGiniTool.exe
-sha256=852b30eed0cf8182d08d84d3383625e2d323080aad74801f2266fb8aba45c081
-size=11051008
-note=Added: a crash note. If the tool fails while starting, it now writes crash.txt next to the exe with the version, the start-up step it stopped on, the exception code and the faulting module, and says so in a message box. Send that file with any report - before this, "it does not open" left nothing behind to look at.
-note=Fixed: installing the picture layer could record another program's proxy as GameLoop's original. On a PC that had TAC Panel Loop installed first, the DLL that Restore put back was TAC's hook, not GameLoop's own, and nothing said so. The original now comes from GameLoop's own component cache, and a file only counts as one if it carries ANGLE's version resource - no proxy does.
-note=If another program's proxy is installed and GameLoop's copy of it cannot be found, the picture layer now says so and stops, instead of installing over it and destroying the only way back.
-note=The FPS counter is just the counter: the number in NVIDIA green with its unit beside it, and nothing else. The box, the frame-time graph and the CPU row are gone.
-note=The digits are drawn with a real antialiased font at the exact size of your frame, so they stay sharp at 720p, 1080p and 1440p instead of turning into blocks.
-note=Fixed: copying a file from one folder on the device to another folder on the device copied nothing and said it had failed. It copies the file now.
-note=Fixed: a copy inside the device now shows in the transfer bar with a Cancel button, like a send or a fetch does.
-note=The tool no longer needs the Visual C++ Redistributable. 3.0.0 imported VCRUNTIME140.dll and MSVCP140.dll, which Windows does not ship, so on a PC without it the tool did not start at all - that is what "updated but will not open" was.
-note=A failed start after the update was copied is no longer silent: the tool says it could not start and names the file to open instead.
-note=The final start falls back to the Windows "runas" verb, so an update that finishes without administrator rights can still open the tool.
+sha256=7006b27bb773b7cd0d9c5f68d1e09535c475c2631c33ec6bcee093796cfcc6d8
+size=14207488
+note=Monitor's left column is a companion now: a live character who reports what the tool has just done and what your machine is doing, instead of a console printing sysinfo.
+note=She reacts to the machine. Past 80% on the processor, the memory or the graphics card she cries, the glow turns red and an alarm panel appears with the reading that upset her - and it all clears the moment the load does.
+note=The reports are separate panels rather than one block: the newest in the bubble over her head, the rest in cards around her, and your machine's own readings in whatever is left.
+note=Device has a Preferences tab. It is empty on purpose - the settings that go there are not decided yet - and nothing on it writes to GameLoop or to the registry.
+note=PER GAME detects all three PUBG MOBILE builds - global, Vietnam and Taiwan - and the settings you pick for any of them reach the Korean build too, which GameLoop does not ship.
+note=Fixed: a PER GAME choice reverted to the old value a few seconds after you made it, because the passive refresh only knew about three of the four columns.
+note=Network marks the resolver actually in force, and the mark now survives a restart instead of only appearing on the press that applied it.
+note=New: the tool shows a "what's new" card the first time a version runs, and never again after that.
