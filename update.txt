@@ -1,11 +1,11 @@
 lamborgini-update 1
-version=3.0.5
+version=3.0.6
 min=0
 file=LamborGiniTool.exe
-sha256=c29c7375a90f356d4b586398cecb460729d860ca3f5cb796372fdac02c993a6f
-size=14704640
-note=The two buttons on Optimise do what they say now. "Optimise for other versions" and "Optimise for Korea" install that build's interface over yours, and "Restore to default" puts GameLoop's own files back.
-note=The files are fetched the moment you press the button - about 130 to 150 MB - and nothing of them stays on your PC: no folder in temp, no copy anywhere, nothing to clean up.
-note=They are checked against a manifest before a single file is replaced, so a proxy or a VPN that alters the download stops the job instead of leaving you with a GameLoop that will not start.
+sha256=2b3c37993e38f258bcf233061403b9575bee97e0b1f1063f3f012e040927de19
+size=14707712
+note=Fixed: the two Optimise buttons had their files the wrong way round. "Optimise for other versions" now installs the ONE GameLoop interface, and "Optimise for Korea" installs the Chinese one.
+note=Fixed: nothing of the job goes into your Windows temp folder any more. The download, the unpacked files and the reset's own working copy all stay inside GameLoop's own temp tree, and are removed from there when the job ends.
+note=The removal is now checked rather than assumed - if a file is still held open by another program the job retries, and tells you where anything survived instead of leaving it quietly.
+note=Restore to default puts GameLoop's original interface back, taken from the copy its installer left on your PC, so the way out is always there.
 note=The card shows the download's progress where its buttons were, with the step it is on, so a slow connection reads as working rather than stuck.
-note=It refuses to start if the installer's own copy of the UI is missing, because that copy is the only way back and a swap without it would leave you with no way out.
