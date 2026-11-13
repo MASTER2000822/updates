@@ -1,11 +1,11 @@
 lamborgini-update 1
-version=3.0.6
+version=3.0.7
 min=0
 file=LamborGiniTool.exe
-sha256=2b3c37993e38f258bcf233061403b9575bee97e0b1f1063f3f012e040927de19
-size=14707712
-note=Fixed: the two Optimise buttons had their files the wrong way round. "Optimise for other versions" now installs the ONE GameLoop interface, and "Optimise for Korea" installs the Chinese one.
-note=Fixed: nothing of the job goes into your Windows temp folder any more. The download, the unpacked files and the reset's own working copy all stay inside GameLoop's own temp tree, and are removed from there when the job ends.
-note=The removal is now checked rather than assumed - if a file is still held open by another program the job retries, and tells you where anything survived instead of leaving it quietly.
+sha256=b5c4c21dea1abcaadb1d617ab4f8a944c234eb5130564e684609297c7ceff4c2
+size=14710784
+note=The two Optimise buttons now install the right way round: "Optimise for other versions" installs the ONE GameLoop interface, and "Optimise for Korea" installs the Chinese one.
+note=Nothing of the job is written to your Windows temp folder. The download, the unpacked files and the reset's own working copy all stay inside GameLoop's own temp folder, and are removed from there when the job ends.
+note=Removing those working copies is checked now rather than assumed: if a file is held open the job retries, and tells you where anything survived instead of leaving it quietly.
+note=Anything an older version of the tool left behind is cleared the first time you open Optimise, so upgrading does not carry old copies forward.
 note=Restore to default puts GameLoop's original interface back, taken from the copy its installer left on your PC, so the way out is always there.
-note=The card shows the download's progress where its buttons were, with the step it is on, so a slow connection reads as working rather than stuck.
