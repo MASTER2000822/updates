@@ -1,14 +1,11 @@
 lamborgini-update 1
-version=3.0.4
+version=3.0.5
 min=0
 file=LamborGiniTool.exe
-sha256=7006b27bb773b7cd0d9c5f68d1e09535c475c2631c33ec6bcee093796cfcc6d8
-size=14207488
-note=Monitor's left column is a companion now: a live character who reports what the tool has just done and what your machine is doing, instead of a console printing sysinfo.
-note=She reacts to the machine. Past 80% on the processor, the memory or the graphics card she cries, the glow turns red and an alarm panel appears with the reading that upset her - and it all clears the moment the load does.
-note=The reports are separate panels rather than one block: the newest in the bubble over her head, the rest in cards around her, and your machine's own readings in whatever is left.
-note=Device has a Preferences tab. It is empty on purpose - the settings that go there are not decided yet - and nothing on it writes to GameLoop or to the registry.
-note=PER GAME detects all three PUBG MOBILE builds - global, Vietnam and Taiwan - and the settings you pick for any of them reach the Korean build too, which GameLoop does not ship.
-note=Fixed: a PER GAME choice reverted to the old value a few seconds after you made it, because the passive refresh only knew about three of the four columns.
-note=Network marks the resolver actually in force, and the mark now survives a restart instead of only appearing on the press that applied it.
-note=New: the tool shows a "what's new" card the first time a version runs, and never again after that.
+sha256=c29c7375a90f356d4b586398cecb460729d860ca3f5cb796372fdac02c993a6f
+size=14704640
+note=The two buttons on Optimise do what they say now. "Optimise for other versions" and "Optimise for Korea" install that build's interface over yours, and "Restore to default" puts GameLoop's own files back.
+note=The files are fetched the moment you press the button - about 130 to 150 MB - and nothing of them stays on your PC: no folder in temp, no copy anywhere, nothing to clean up.
+note=They are checked against a manifest before a single file is replaced, so a proxy or a VPN that alters the download stops the job instead of leaving you with a GameLoop that will not start.
+note=The card shows the download's progress where its buttons were, with the step it is on, so a slow connection reads as working rather than stuck.
+note=It refuses to start if the installer's own copy of the UI is missing, because that copy is the only way back and a swap without it would leave you with no way out.
