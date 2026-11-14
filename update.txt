@@ -1,11 +1,14 @@
 lamborgini-update 1
-version=3.0.7
+version=3.0.8
 min=0
 file=LamborGiniTool.exe
-sha256=b5c4c21dea1abcaadb1d617ab4f8a944c234eb5130564e684609297c7ceff4c2
-size=14710784
-note=The two Optimise buttons now install the right way round: "Optimise for other versions" installs the ONE GameLoop interface, and "Optimise for Korea" installs the Chinese one.
-note=Nothing of the job is written to your Windows temp folder. The download, the unpacked files and the reset's own working copy all stay inside GameLoop's own temp folder, and are removed from there when the job ends.
-note=Removing those working copies is checked now rather than assumed: if a file is held open the job retries, and tells you where anything survived instead of leaving it quietly.
-note=Anything an older version of the tool left behind is cleared the first time you open Optimise, so upgrading does not carry old copies forward.
-note=Restore to default puts GameLoop's original interface back, taken from the copy its installer left on your PC, so the way out is always there.
+sha256=5aea02ca47a8a7b90f22790e3719ba79d8175531f932089bb300eabdcc79f7ab
+size=17300992
+note=Side loading now sends files that sit in a folder with a Chinese name. adb used to be handed a path it could not read, and the row said "did not arrive" while the file never moved.
+note=Close Emulator really closes it now. It used to end the VM while the service that keeps the VM up was still running, so the emulator came back a second later and the tool still said it had closed it.
+note=The close also stops GameLoop's background driver and tidies the log files it leaves in the UI folder - about five megabytes a session. The payload itself is never touched.
+note=And the tool no longer calls that "everything is closed" while they run: the driver and the service are counted as leftovers, named in the power card, and the Close row acts on them.
+note=Optimise now says which interface is in place, in the card's own foot: under the two buttons and behind a hairline, the card names the UI GameLoop is running - the optimised one or its own - with the build it read and when this tool last changed it.
+note=It sits inside the card rather than in a panel above the grid, so the answer is read on the way out of the card that changed it instead of in a second box that had to be connected to it by eye.
+note=The answer survives a restart: it is worked out from twelve of GameLoop's own files plus a note of what this tool installed, so it is still right the next time you open the page.
+note=If GameLoop updates itself afterwards the foot says "Changed" rather than keep claiming the optimise is there. The files no longer match what was installed, so the claim would be false.
