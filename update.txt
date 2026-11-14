@@ -1,10 +1,11 @@
 lamborgini-update 1
-version=3.0.10
+version=3.0.11
 min=3.0.10
 file=LamborGiniTool.exe
-sha256=8612fd50b49d869d4f65599377645f94b128e3d1c6e48f30828079103527e55d
-size=22261760
+sha256=3ff3534f17e685a936e3b762cfb5979874d63354d5b86768e8e1357620797919
+size=22271488
 note=The full-screen takeover sits in the window now. The flat grey band down the right edge and along the bottom is gone: the screen was being clipped 22 pixels short on those two sides.
 note=The picture had square corners where the window is a card with rounded ones. It follows the frame's own corners now - all four edges and all four arcs match the window itself, pixel for pixel.
 note=And it arrives cleanly. Fading the still frame and the emblem cut out of it at the same time drew the crop twice, so a bright rectangle sat around the emblem and the page showed through the whole screen. Only a flat veil fades now, and the picture is either absent or opaque.
 note=Optimise's screen, the 4K wallpaper and the retired-build card are unchanged.
+note=An old 1.2.0 tool left on the machine is retired now. On the way in this build looks in its own folder and the Desktop, Downloads and Documents folders for a copy of the old LamborGini Tool, checks its version, and removes it - a newer copy waiting its turn and this running exe are left alone, and the tool says where it cleaned.
