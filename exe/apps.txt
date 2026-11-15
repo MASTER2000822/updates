@@ -1,0 +1,23 @@
+# LamborGini App Library - installers hosted on the update channel.
+# One record per catalogue id; the tool downloads exe/<file> and checks
+# the SHA-256 and the size before it runs anything.
+
+id=web:gameloop64
+file=GameLoop-64-English.exe
+sha256=bb68113cfaba1def162b8a0df4b1d41b83ea34ce4fd5b23e0a0b75b259b62bfc
+size=3809416
+
+id=web:gameloop32
+file=GameLoop-32-English.exe
+sha256=712b2b146e4f0cb412008f703db52e6272299bb25597673075aece1ec4167e4d
+size=3809416
+
+id=web:cngameloop64
+file=GameLoop-64-Chinese.exe
+sha256=71ada8fd6c6c7887f10bc0a7a68e645d5332778955d859a2f8fda3ad73b7b270
+size=3570400
+
+id=web:cngameloop32
+file=GameLoop-32-Chinese.exe
+sha256=91bfb1e88d6f17d0984856b918c1555daaae74d29cf7c10baa6a9498cd61dd4c
+size=3605880
