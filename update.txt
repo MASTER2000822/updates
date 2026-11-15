@@ -1,9 +1,12 @@
 lamborgini-update 1
-version=3.0.28
+
+version=3.0.29
 min=3.0.10
 file=LamborGiniTool.exe
-sha256=c7753ee06ca767bc0efedf87c49f9b2e6dd4e818d67a588fa15b9c538eafbac0
-size=22312960
+sha256=0939f55401af798bcf6f5bc4ebfc7ff4d06604f4f8d85635b980cd2dd2b103e6
+size=22319104
+note=Setup installs now even with GameLoop closed. Pressing Install starts the emulator itself, waits for Android to come up, and then installs - you no longer have to start GameLoop first and come back.
+note=Setup restarts a running emulator whose adb switch is off, and when a connect still fails it says the real reason instead of blaming the emulator for everything.
 note=The full-screen takeover sits in the window now. The flat grey band down the right edge and along the bottom is gone: the screen was being clipped 22 pixels short on those two sides.
 note=The picture had square corners where the window is a card with rounded ones. It follows the frame's own corners now - all four edges and all four arcs match the window itself, pixel for pixel.
 note=And it arrives cleanly. Fading the still frame and the emblem cut out of it at the same time drew the crop twice, so a bright rectangle sat around the emblem and the page showed through the whole screen. Only a flat veil fades now, and the picture is either absent or opaque.
@@ -18,4 +21,3 @@ note=The line under the repair cards is a bar now. It was a one-pixel rule, and 
 note=The link on the empty page sits in its card. "Install an app with Setup" was drawn below the last line with no room reserved for it, so the card's bottom edge cut through the words; it has its own row now, centred, with the same margin above and below it as the rest of the card.
 note=That half-install check found a bug in the search rather than in the install. A folder holding nothing but AppMarket still counts as a folder, and the tool used to take the first one it found - so a leftover classic install, whose registry key outlives its files, was described while the real one was never looked at. It now scores every place a GameLoop has ever been and answers with the one that looks like a GameLoop: an engine is worth more than a folder name, and a market on its own is worth almost nothing. The per-user folder the newer downloader uses is on that list too.
 note=The 3.6 MB Tencent file is called a downloader on its card instead of an installer, and its details say plainly that it puts a market on the disk and stops. The Library's empty page names a market-only install for what it is instead of asking you to install GameLoop again.
-note=The PRE-READY panel on Optimise is gone, and so is everything behind it - the one-press preparation, the engine wait, the folder import and the full-screen sequencer that narrated it. The Optimise card has the page to itself now. The full-screen screen still appears for an interface swap or a restore, which are the two jobs that remain.
