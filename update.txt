@@ -1,10 +1,13 @@
 lamborgini-update 1
 
-version=3.0.34
+version=3.0.35
 min=3.0.10
 file=LamborGiniTool.exe
-sha256=ea525df7131c1377a4a203bf4f3d15eb1bbdfac287770c53883cecd0856900be
-size=22316032
+sha256=47e785a6bcc5b99930868c984062cdaf3973a8e45f4bab5b9e222dff5f1293fb
+size=22317568
+note=Diagnosis no longer cuts off its Virtual Memory card on a smaller or scaled display. The page scrolls now, long hints wrap instead of running off the card, and every row grows to fit the words it actually used.
+note=Setup's progress bar keeps its full frame rate while it sweeps, so Connecting to GameLoop no longer judders while the emulator starts.
+note=The taskbar preview shows the real window again. Minimising from Windows leaves a full opaque frame now, instead of the dark empty shape DWM sometimes kept from an old fade.
 note=The What's New list answers the wheel now instead of trailing it: each step moves the text the frame the wheel turns, the glide keeps the tool at its full frame rate to the end, and the settle is tighter.
 note=The What's New scroll is a weighted glide now. The old ease started fast and then stopped dead in its own tail, which read as lag; the card accelerates into the wheel step and settles out of it instead.
 note=Setup installs on the purge's bar now - gold, with a highlight travelling the filled part and a bright edge where the work has got to - and the bar eases between files instead of jumping.
