@@ -1,10 +1,13 @@
 lamborgini-update 1
 
-version=3.0.36
+version=3.0.37
 min=3.0.10
 file=LamborGiniTool.exe
-sha256=8315332954a36544359cc95b1fff82c14fa0eacb74bad680302e349963ecde29
-size=22321152
+sha256=430e818db05e12150bdb8b5855cec10f1de44b4ad3b720602ea471b9cbd3a993
+size=22361088
+note=APPLY now takes a resolution the moment you type it - the first click applies, the chip counts a number still sitting in a field, and nothing is lost to a second click.
+note=Side loading is the old tool's transfer again: folders are walked, the far end is made ready, and files travel as fast copies and tar streams - five at a time, each with a plain adb push behind it.
+note=Text is sharp at every window size now. The font atlas is rasterized at the render scale and rebuilt when a resize settles, instead of being stretched.
 note=Configuration's number fields accept typing now - values no longer snap to a random number when you press away, and wide values like 2560 fit in the field instead of being clipped.
 note=The window scales with your display and is resizable now - drag any edge or corner, and the size you pick is remembered for next time.
 note=Side loading replaces instead of merging: sending or fetching to a folder that already holds those files overwrites the old copies now.
