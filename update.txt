@@ -1,13 +1,15 @@
 lamborgini-update 1
-version=3.0.14
+version=3.0.16
 min=3.0.10
 file=LamborGiniTool.exe
-sha256=76a496e6390aad7403811fe6077de05769cd6a0a2832896d8d8c6e065612ac78
-size=22282752
+sha256=b2387fbacc54b1bef8cf53ece69c1edd47db62e469f69d75f6f7d65ad436aeb3
+size=22317056
 note=The full-screen takeover sits in the window now. The flat grey band down the right edge and along the bottom is gone: the screen was being clipped 22 pixels short on those two sides.
 note=The picture had square corners where the window is a card with rounded ones. It follows the frame's own corners now - all four edges and all four arcs match the window itself, pixel for pixel.
 note=And it arrives cleanly. Fading the still frame and the emblem cut out of it at the same time drew the crop twice, so a bright rectangle sat around the emblem and the page showed through the whole screen. Only a flat veil fades now, and the picture is either absent or opaque.
 note=Optimise's screen, the 4K wallpaper and the retired-build card are unchanged.
 note=An old 1.2.0 tool left on the machine is retired now. On the way in this build looks in its own folder and the Desktop, Downloads and Documents folders for a copy of the old LamborGini Tool, checks its version, and removes it - a newer copy waiting its turn and this running exe are left alone, and the tool says where it cleaned.
+note=Purge now finishes. The GameLoop service was never stopped - a service cannot be killed, and it holds its own files - so the folder survived the delete. The services are stopped first, and ONE GameLoop and the new GameLoop (TAC) are removed too, which the original batch never knew.
+note=The engine no longer lists an emulator that is not there. GameLoop's Add/Remove Programs entry is called just "GameLoop" or the Chinese name, so a purge left it behind and the launcher offered a program that was gone. A GameLoop row is built only when its files exist, and Purge removes those entries too.
 note=Purge stops saying it failed when it worked. The batch it runs deletes itself near the end - it empties %TEMP% - so Windows reported an error after a clean purge. The result is now read from the machine: no GameLoop folder left and no Tencent key left means it worked.
 note=Purge is the original tool's again, command for command: every drive, every folder, every service and every registry key that batch knew, run the same way. On top of it a sweep now walks the registry and removes anything left that names Tencent - key, value or uninstall entry.
