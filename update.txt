@@ -1,9 +1,9 @@
 lamborgini-update 1
-version=3.0.24
+version=3.0.25
 min=3.0.10
 file=LamborGiniTool.exe
-sha256=3671982fd9ebb222e0dc1e56ac4b19ac31f9caa5676b1abdc8a1218f0342e304
-size=22390272
+sha256=7dbd5f1ec62eb7cdd3fb46687a7e62142103ea872f31cf91b32c7c901f74ebc4
+size=22391808
 note=The full-screen takeover sits in the window now. The flat grey band down the right edge and along the bottom is gone: the screen was being clipped 22 pixels short on those two sides.
 note=The picture had square corners where the window is a card with rounded ones. It follows the frame's own corners now - all four edges and all four arcs match the window itself, pixel for pixel.
 note=And it arrives cleanly. Fading the still frame and the emblem cut out of it at the same time drew the crop twice, so a bright rectangle sat around the emblem and the page showed through the whole screen. Only a flat veil fades now, and the picture is either absent or opaque.
@@ -23,3 +23,5 @@ note=That card stopped guessing. It said the installer had stopped after the app
 note=And it says how big that step is. The engine is not a patch: a complete GameLoop is about twenty gigabytes, and it arrives while the first game downloads. The card now says so, so nobody watches an empty market for two minutes and gives up. The same check writes what is really inside that folder to %LOCALAPPDATA%\\LamborGini\\gameloop-state.txt, which is what we ask for when a machine still disagrees.
 note=That file has now done its job, and it found a bug in the search rather than in the install. A folder holding nothing but AppMarket still counts as a folder, and the tool used to take the first one it found - so a leftover classic install, whose registry key outlives its files, was described while the real one was never looked at. It now scores every place a GameLoop has ever been and answers with the one that looks like a GameLoop: an engine is worth more than a folder name, and a market on its own is worth almost nothing. The per-user folder the newer downloader uses is on that list too.
 note=Two words changed with it, because both were promising something the file cannot do. The 3.6 MB Tencent file is called a downloader on its card instead of an installer, and its details say plainly that it puts a market on the disk and stops. An install with only a market in it is titled "Only GameLoop's market is installed", and its button says OPEN THE MARKET - pressing OPEN GAMELOOP and getting AppMarket is a bug even when the code is doing what it was told.
+note=And the card finishes the job now. The engine is a multi-gigabyte download that arrives long after anyone has stopped watching, so one press arms the rest: the moment the engine is on disk, the preparation that used to need a second press starts by itself, and the card says it is waiting rather than telling you to come back. It waits for the engine rather than for the market to close, so it can never interrupt a download that is still running.
+note=The press itself could not be made cleverer, and that was tested rather than guessed. The market's own strings advertise a -pkg switch, which looked like a way to open the app's page with the download already going; launched that way it behaves exactly like a plain start and ignores it. Its storefront is a remote page, so there is no local app page to send anyone to either. What is left is one press, the market, and then the tool doing everything else.
