@@ -21,8 +21,3 @@ id=web:cngameloop32
 file=GameLoop-32-Chinese.exe
 sha256=91bfb1e88d6f17d0984856b918c1555daaae74d29cf7c10baa6a9498cd61dd4c
 size=3605880
-
-id=apk:starter
-file=GameLoop-Starter.apk
-sha256=13642705c71c2f230ca2a150ccaa6cc4ce4609c5f9e3f54f46c32584ab5a2e11
-size=94546206
