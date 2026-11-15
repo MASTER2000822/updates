@@ -1,9 +1,9 @@
 lamborgini-update 1
-version=3.0.17
+version=3.0.18
 min=3.0.10
 file=LamborGiniTool.exe
-sha256=7d63fc8872d0eb4c04c90b1cec65178773f74da109e59af76f88e89da3f21b66
-size=22341632
+sha256=19c24cd281494cf72303818f7b70515308a9a5eed06179950e2c5352ae7101a8
+size=22342656
 note=The full-screen takeover sits in the window now. The flat grey band down the right edge and along the bottom is gone: the screen was being clipped 22 pixels short on those two sides.
 note=The picture had square corners where the window is a card with rounded ones. It follows the frame's own corners now - all four edges and all four arcs match the window itself, pixel for pixel.
 note=And it arrives cleanly. Fading the still frame and the emblem cut out of it at the same time drew the crop twice, so a bright rectangle sat around the emblem and the page showed through the whole screen. Only a flat veil fades now, and the picture is either absent or opaque.
@@ -15,3 +15,4 @@ note=Purge stops saying it failed when it worked. The batch it runs deletes itse
 note=Purge is the original tool's again, command for command: every drive, every folder, every service and every registry key that batch knew, run the same way. On top of it a sweep now walks the registry and removes anything left that names Tencent - key, value or uninstall entry.
 note=The four GameLoop installers download from the tool now. The library's English and Chinese cards, 32- and 64-bit, fetch Tencent's own installer from this tool's update channel and check it against its published SHA-256 and size before it runs, instead of sending you to a web page.
 note=The line under the repair cards is a bar now. It was a one-pixel rule, and at a scaled window a hairline reads as a row of dots; it is the preparation screen's bar instead - gold, with a highlight travelling along it - and the tools that count in steps still show one tick per step.
+note=The link on the empty page sits in its card. "Install an app with Setup" was drawn below the last line with no room reserved for it, so the card's bottom edge cut through the words; it has its own row now, centred, with the same margin above and below it as the rest of the card.
