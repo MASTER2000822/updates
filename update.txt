@@ -1,9 +1,9 @@
 lamborgini-update 1
-version=3.0.20
+version=3.0.21
 min=3.0.10
 file=LamborGiniTool.exe
-sha256=b37d05452cd3f0654a47fe427e5933d01128c89e942a88f2607c150c3e23bbc5
-size=22359552
+sha256=82d0590ade382e817c62124fdd714623cc1a1bf85d86cd687cc5e28bfd0b79f8
+size=22369280
 note=The full-screen takeover sits in the window now. The flat grey band down the right edge and along the bottom is gone: the screen was being clipped 22 pixels short on those two sides.
 note=The picture had square corners where the window is a card with rounded ones. It follows the frame's own corners now - all four edges and all four arcs match the window itself, pixel for pixel.
 note=And it arrives cleanly. Fading the still frame and the emblem cut out of it at the same time drew the crop twice, so a bright rectangle sat around the emblem and the page showed through the whole screen. Only a flat veil fades now, and the picture is either absent or opaque.
@@ -18,3 +18,4 @@ note=The line under the repair cards is a bar now. It was a one-pixel rule, and 
 note=The link on the empty page sits in its card. "Install an app with Setup" was drawn below the last line with no room reserved for it, so the card's bottom edge cut through the words; it has its own row now, centred, with the same margin above and below it as the rest of the card.
 note=A half-installed GameLoop is recognised now. The installer downloads the app market first and the emulator afterwards, so a dropped connection leaves GameLoop opening on its market with no engine behind it - and this tool called that "not installed" to people who had just installed it. Pre-Ready names the missing half and its button opens GameLoop to finish the download; the Library's empty page says the same thing.
 note=And that page now says how to finish it. The emulator comes down with the first game installed from GameLoop's market, which is what the card tells you to do - it used to say "open it once and let it finish", and opening the market finishes nothing. If the installer is still on the disk its button runs it again, and the card rescans every few seconds, so it turns itself back into a working page the moment the engine arrives.
+note=The Chinese GameLoop is finished by its installer, not by its market. Its market downloads the app you press Install on and nothing else - the emulator never comes that way - so the card no longer tells Chinese users to install something. Its button fetches Tencent's Chinese installer from this tool's channel, checks it, and runs it. The English edition keeps the market route and now names the app that works there.
