@@ -1,12 +1,12 @@
 lamborgini-update 1
-version=3.0.12
+version=3.0.13
 min=3.0.10
 file=LamborGiniTool.exe
-sha256=01b36a207ff85f2c0f4432a3ff36c46020885d4ff9e176a279e7e1a2d064cf96
-size=22273024
+sha256=2f744a2e37bb8a8022a4e89243efff901a2c1e2e4f01c4797d321bf478e9e064
+size=22261248
 note=The full-screen takeover sits in the window now. The flat grey band down the right edge and along the bottom is gone: the screen was being clipped 22 pixels short on those two sides.
 note=The picture had square corners where the window is a card with rounded ones. It follows the frame's own corners now - all four edges and all four arcs match the window itself, pixel for pixel.
 note=And it arrives cleanly. Fading the still frame and the emblem cut out of it at the same time drew the crop twice, so a bright rectangle sat around the emblem and the page showed through the whole screen. Only a flat veil fades now, and the picture is either absent or opaque.
 note=Optimise's screen, the 4K wallpaper and the retired-build card are unchanged.
 note=An old 1.2.0 tool left on the machine is retired now. On the way in this build looks in its own folder and the Desktop, Downloads and Documents folders for a copy of the old LamborGini Tool, checks its version, and removes it - a newer copy waiting its turn and this running exe are left alone, and the tool says where it cleaned.
-note=Purge is itself again. With the new GameLoop not installed, the whole Tencent registry key goes, as the old tool did - not just the MobileGamePC branch - and the temp-folder sweep clears every subfolder of %TEMP%, not just the empty ones.
+note=Purge is the original tool's again, command for command: every drive, every folder, every service and every registry key that batch knew, run the same way. On top of it a sweep now walks the registry and removes anything left that names Tencent - key, value or uninstall entry.
