@@ -1,10 +1,13 @@
 lamborgini-update 1
 
-version=3.0.35
+version=3.0.36
 min=3.0.10
 file=LamborGiniTool.exe
-sha256=47e785a6bcc5b99930868c984062cdaf3973a8e45f4bab5b9e222dff5f1293fb
-size=22317568
+sha256=8315332954a36544359cc95b1fff82c14fa0eacb74bad680302e349963ecde29
+size=22321152
+note=Configuration's number fields accept typing now - values no longer snap to a random number when you press away, and wide values like 2560 fit in the field instead of being clipped.
+note=The window scales with your display and is resizable now - drag any edge or corner, and the size you pick is remembered for next time.
+note=Side loading replaces instead of merging: sending or fetching to a folder that already holds those files overwrites the old copies now.
 note=Diagnosis no longer cuts off its Virtual Memory card on a smaller or scaled display. The page scrolls now, long hints wrap instead of running off the card, and every row grows to fit the words it actually used.
 note=Setup's progress bar keeps its full frame rate while it sweeps, so Connecting to GameLoop no longer judders while the emulator starts.
 note=The taskbar preview shows the real window again. Minimising from Windows leaves a full opaque frame now, instead of the dark empty shape DWM sometimes kept from an old fade.
