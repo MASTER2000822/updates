@@ -1,10 +1,10 @@
 lamborgini-update 1
-version=3.0.38
+version=3.0.39
 min=3.0.10
 file=LamborGiniTool.exe
-sha256=3ed13b467973c0fc759a5b0c30575905469455dbc03d1ff482a705aa3b586097
+sha256=ec02fad664939a48cf6a7b7f9880f89d6c88fc4c828b607c19366613926ac63a
 size=22362624
-note=Side loading now reconnects and retries a failed upload, so a dropped GameLoop adb link no longer leaves a file behind.
+note=Side loading retries after an adb drop and gives a failed folder copy a recursive recovery pass.
 note=APPLY now takes a resolution the moment you type it - the first click applies, the chip counts a number still sitting in a field, and nothing is lost to a second click.
 note=Side loading is the old tool's transfer again: folders are walked, the far end is made ready, and files travel as fast copies and tar streams - five at a time, each with a plain adb push behind it.
 note=Text is sharp at every window size now. The font atlas is rasterized at the render scale and rebuilt when a resize settles, instead of being stretched.
