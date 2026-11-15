@@ -1,10 +1,11 @@
 lamborgini-update 1
 
-version=3.0.30
+version=3.0.31
 min=3.0.10
 file=LamborGiniTool.exe
-sha256=12d5f346f124a5548aff13bd94b59136f725b4604608d63d6ab1c89fe3c9d62c
-size=22315008
+sha256=ed025e2339d543e3ca778f2d84bd6031ae53fffd3121639ace1f8dd13a1c09cc
+size=22314496
+note=An APK and its OBB dropped together are one button now - Merge Install. It installs the game, then copies the OBB beside it, in the order the two files need - no more choosing between Install APK and Install OBB, and no wrong order to press them in.
 note=The What's New card is a card again. It carried every note the channel ever published, so it filled a third of the window; it shows the current release's changes now, and the rest stays in update.txt.
 note=Setup installs now even with GameLoop closed. Pressing Install starts the emulator itself, waits for Android to come up, and then installs - you no longer have to start GameLoop first and come back.
 note=Setup restarts a running emulator whose adb switch is off, and when a connect still fails it says the real reason instead of blaming the emulator for everything.
