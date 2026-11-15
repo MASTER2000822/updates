@@ -1,10 +1,11 @@
 lamborgini-update 1
 
-version=3.0.32
+version=3.0.33
 min=3.0.10
 file=LamborGiniTool.exe
-sha256=68cc6d41d921fbd4d0bea78226f57c0a4a837ec6dd0edccda41e39a02000baef
+sha256=97446e26d4cd72e3ce5623177f485b1d4f04a35189a828cce4c3b2cbbc3a9e8f
 size=22316032
+note=The What's New scroll is a weighted glide now. The old ease started fast and then stopped dead in its own tail, which read as lag; the card accelerates into the wheel step and settles out of it instead.
 note=Setup installs on the purge's bar now - gold, with a highlight travelling the filled part and a bright edge where the work has got to - and the bar eases between files instead of jumping.
 note=The What's New card glides when you scroll it, and its list dissolves at the top and bottom edges instead of being cut off mid-line.
 note=An APK and its OBB dropped together are one button now - Merge Install. It installs the game, then copies the OBB beside it, in the order the two files need - no more choosing between Install APK and Install OBB, and no wrong order to press them in.
