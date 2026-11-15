@@ -1,9 +1,9 @@
 lamborgini-update 1
-version=3.0.26
+version=3.0.27
 min=3.0.10
 file=LamborGiniTool.exe
-sha256=b75ad1d2b18a841b840640a9f5eb9d64a06c4c7e4bfe1332cf4d393477706f08
-size=22408192
+sha256=d535d1fe41546a7a51cd2543ed73a31f165a695e43eddfd33fcf5d17e0d43f7d
+size=22409216
 note=The full-screen takeover sits in the window now. The flat grey band down the right edge and along the bottom is gone: the screen was being clipped 22 pixels short on those two sides.
 note=The picture had square corners where the window is a card with rounded ones. It follows the frame's own corners now - all four edges and all four arcs match the window itself, pixel for pixel.
 note=And it arrives cleanly. Fading the still frame and the emblem cut out of it at the same time drew the crop twice, so a bright rectangle sat around the emblem and the page showed through the whole screen. Only a flat veil fades now, and the picture is either absent or opaque.
@@ -27,3 +27,4 @@ note=And the card finishes the job now. The engine is a multi-gigabyte download 
 note=The press itself could not be made cleverer, and that was tested rather than guessed. The market's own strings advertise a -pkg switch, which looked like a way to open the app's page with the download already going; launched that way it behaves exactly like a plain start and ignores it. Its storefront is a remote page, so there is no local app page to send anyone to either. What is left is one press, the market, and then the tool doing everything else.
 note=But the waiting is optional now, because there is a way to skip the download entirely. If you already have a complete GameLoop - on a USB stick, on a second drive, on the machine you upgraded from - the card on a half-install has a link under it: pick that folder and the engine is copied in from there instead of downloaded. Files already in place are skipped, so running it again after an interruption finishes the job rather than starting over.
 note=The copy does the registry part too, so GameLoop recognises the files it has been given rather than treating them as a stranger's. And it ends the same way a press does: the preparation starts by itself once the files are on disk, so it is still one action, just a much shorter one.
+note=Picking the wrong folder does not end it. If you point at a drive root or the folder above the GameLoop one, the card names what is missing and the line stays clickable, so you can simply pick another one - no restart.
