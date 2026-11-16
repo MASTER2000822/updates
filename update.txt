@@ -1,9 +1,13 @@
 lamborgini-update 1
-version=3.0.40
+
+version=3.0.41
 min=3.0.10
 file=LamborGiniTool.exe
-sha256=dda7e3bdfc27ea99f51615fd84c9466551a504cf3663532a88e6f4a1d08122ce
-size=22364672
+sha256=f53c23818c8fe4ada758553f226f86471d9a913f02497941744e1b993f3a5744
+size=22390784
+note=The window now sizes itself to the monitor you are actually on: it uses the usable work area, snaps to a clean scale that fits, and re-fits when you move it to another display or change Windows scaling.
+note=Text stays sharp at that size. Windows no longer stretches the finished frame, and the font atlas is baked at the render scale from the first frame, then rebuilt when a resize settles.
+note=Purge emulator now handles both GameLoop and TAC. It traces Tencent in every user hive, follows registry install paths on any drive, then clears ProgramData and the folders themselves - and checks none are left.
 note=Side loading is now working
 note=APPLY now takes a resolution the moment you type it - the first click applies, the chip counts a number still sitting in a field, and nothing is lost to a second click.
 note=Side loading is the old tool's transfer again: folders are walked, the far end is made ready, and files travel as fast copies and tar streams - five at a time, each with a plain adb push behind it.
