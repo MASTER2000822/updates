@@ -1,10 +1,13 @@
 lamborgini-update 1
 
-version=3.0.41
+version=3.0.42
 min=3.0.10
 file=LamborGiniTool.exe
-sha256=f53c23818c8fe4ada758553f226f86471d9a913f02497941744e1b993f3a5744
-size=22390784
+sha256=d4d2548e65451417598298dd1ec8563d74ad9cb893c9403611f2ff6d1083862f
+size=22337536
+note=Purge emulator no longer reaches outside GameLoop. It followed install paths out of the registry, and most services name their own path as C:\Windows\system32 - so system32 itself went into the delete, and the sweep that ends whatever runs from those folders ended svchost with it. That was the blue screen, seconds after the press.
+note=A folder is removed now only when its own name says GameLoop. The registry keys are still cleaned, but nothing in them is followed to disk any more, and the system folders are refused outright even if a path reaches them.
+note=The new GameLoop is detected and left alone. The old batch is gone: no taskkill on RuntimeBroker or the touchpad helper, no whole-folder wipe of the Temp directory on every drive, no emptying of the user Temp folder. Every program closed and every folder removed is named in the tool now.
 note=The window now sizes itself to the monitor you are actually on: it uses the usable work area, snaps to a clean scale that fits, and re-fits when you move it to another display or change Windows scaling.
 note=Text stays sharp at that size. Windows no longer stretches the finished frame, and the font atlas is baked at the render scale from the first frame, then rebuilt when a resize settles.
 note=Purge emulator now handles both GameLoop and TAC. It traces Tencent in every user hive, follows registry install paths on any drive, then clears ProgramData and the folders themselves - and checks none are left.
