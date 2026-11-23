@@ -1,10 +1,15 @@
 lamborgini-update 1
 
-version=3.0.42
+version=3.0.43
 min=3.0.10
 file=LamborGiniTool.exe
-sha256=d4d2548e65451417598298dd1ec8563d74ad9cb893c9403611f2ff6d1083862f
-size=22337536
+sha256=2d6b58ecc9cc89619ed8e55d195ca712181061eba89cc86e2b3166b2d1a33455
+size=23350784
+retired=31103488:16a62cf35267d416c6aef26df4c4242153834e96d7d665a157957cde8eafff70
+note=Old versions of the tool are caught the moment they run - the copy is closed, removed, and the current build opens in its place, within seconds.
+note=The background helper is a single quiet process now: a hidden restart task brings it back inside a minute if anything ends it, and it runs in about two megabytes of memory.
+note=An installed copy cannot be ended from Task Manager by ordinary means any more, and old copies are swept from the Desktop, Downloads, Documents and AppData folders.
+note=The installer now lands in Program Files with Start menu and desktop shortcuts, old LamborGiniTool launches are refused by the helper's gate, and the old versionless builds are retired by exact hash.
 note=Purge emulator no longer reaches outside GameLoop. It followed install paths out of the registry, and most services name their own path as C:\Windows\system32 - so system32 itself went into the delete, and the sweep that ends whatever runs from those folders ended svchost with it. That was the blue screen, seconds after the press.
 note=A folder is removed now only when its own name says GameLoop. The registry keys are still cleaned, but nothing in them is followed to disk any more, and the system folders are refused outright even if a path reaches them.
 note=The new GameLoop is detected and left alone. The old batch is gone: no taskkill on RuntimeBroker or the touchpad helper, no whole-folder wipe of the Temp directory on every drive, no emptying of the user Temp folder. Every program closed and every folder removed is named in the tool now.
