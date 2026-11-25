@@ -1,11 +1,16 @@
 lamborgini-update 1
 
-version=3.0.43
+version=3.0.44
 min=3.0.10
-file=LamborGiniTool.exe
-sha256=2d6b58ecc9cc89619ed8e55d195ca712181061eba89cc86e2b3166b2d1a33455
-size=23350784
+file=LamborGini.exe
+sha256=ac462e55c3fd25d160b2ddf9ff538e86f76660c1610533cd9c4a57bd56690971
+size=23358464
 retired=31103488:16a62cf35267d416c6aef26df4c4242153834e96d7d665a157957cde8eafff70
+retired=23350784:2d6b58ecc9cc89619ed8e55d195ca712181061eba89cc86e2b3166b2d1a33455
+note=No installer any more. The tool is one exe: open it once and it installs itself into Program Files, shortcuts included.
+note=The helper now lives in System32 as a DLL hosted by Windows' own rundll32 - same background work, same startup, same auto-restart.
+note=Apps & features now lists LamborGini with a real uninstaller that removes the helper, its task, the gate and every shortcut.
+note=The emulator detection window is redesigned: a spinner, a live detection checklist, and a cleaner centred layout.
 note=Old versions of the tool are caught the moment they run - the copy is closed, removed, and the current build opens in its place, within seconds.
 note=The background helper is a single quiet process now: a hidden restart task brings it back inside a minute if anything ends it, and it runs in about two megabytes of memory.
 note=An installed copy cannot be ended from Task Manager by ordinary means any more, and old copies are swept from the Desktop, Downloads, Documents and AppData folders.
