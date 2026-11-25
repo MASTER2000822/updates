@@ -1,13 +1,14 @@
 lamborgini-update 1
 
-version=3.0.45
+version=3.0.46
 min=3.0.10
 file=LamborGini.exe
-sha256=0923f1b8a8e5b65fc1cda132b494d52e7ae588a8855ba269b042df86cdd48d5d
-size=23359488
+sha256=95d11875176083af6af2c9d1458999b4137f3dbc517233583916efa279cdad6f
+size=23416320
 retired=23358464:ac462e55c3fd25d160b2ddf9ff538e86f76660c1610533cd9c4a57bd56690971
-retired=31103488:16a62cf35267d416c6aef26df4c4242153834e96d7d665a157957cde8eafff70
-retired=23350784:2d6b58ecc9cc89619ed8e55d195ca712181061eba89cc86e2b3166b2d1a33455
+note=Close Emulator closes it now. The tool runs as you and GameLoop's emulator runs elevated, so the close could open neither the VM nor its SYSTEM service and could only report what it had failed to close. It now re-runs the same close in a short-lived elevated copy of itself when anything survives - the same thing the old tool's batch did with its runas block - and asks only when there is really something left to close.
+note=Dragging the launch window by its title bar is smooth. It was being repositioned from inside Windows' own move loop, which lands between two of the OS's own move updates and offsets the next frame - and the resize and the re-centre went out as two calls, so the frame in between had the new height and the old top edge. One call now, and nothing at all while a drag is running. Once you have placed the window, the card keeps your top edge instead of sliding back to the middle of the screen.
+note=The launch window no longer changes height after it appears. It used to open 25 px taller than the chooser it turned into and contract the moment the scan landed, and because everything in the card is anchored to its bottom edge, what you saw was the footer band sliding upward under the pointer. It opens at the height it will rest at, so the scan and the result both ask for what the window already is.
 note=With no GameLoop engine installed, the Device page hides its tabs and shows a clear not-installed plate instead.
 note=The launch window now carries the tool's own logo in its title bar.
 note=It finishes with a care pass: the background helper is verified and repaired on the spot when it went missing.
