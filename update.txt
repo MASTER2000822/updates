@@ -1,11 +1,14 @@
 lamborgini-update 1
 
-version=3.0.46
+version=3.0.47
 min=3.0.10
 file=LamborGini.exe
-sha256=95d11875176083af6af2c9d1458999b4137f3dbc517233583916efa279cdad6f
-size=23416320
+sha256=6fe77137747ac59f46f3a38a2668405c44367a71cb64adc2ab6714923a28e9b1
+size=23416832
 retired=23358464:ac462e55c3fd25d160b2ddf9ff538e86f76660c1610533cd9c4a57bd56690971
+note=Close Emulator now finishes the job. It also unloads GameLoop's background service and its aow_drv driver, which is the pair a machine keeps long after the emulator has gone - aow_drv is boot-start, so it stays loaded until the next reboot and keeps five log files open in the UI folder while it does. A close that could not stop it left the leftover warning on screen for ever, over a driver the button could not touch. Starting the emulator puts the driver back, so nothing is lost by stopping it.
+note=The leftover card stopped calling a driver a process. With GameLoop's driver as the only thing left it says so - "GameLoop is still loaded", and the button offers to unload it - and the status panel counts drivers as drivers instead of sending you to Task Manager to look for a process that is not there.
+note=Dragging the launch window by its title bar is smooth, and the window no longer changes height a moment after it appears.
 note=Close Emulator closes it now. The tool runs as you and GameLoop's emulator runs elevated, so the close could open neither the VM nor its SYSTEM service and could only report what it had failed to close. It now re-runs the same close in a short-lived elevated copy of itself when anything survives - the same thing the old tool's batch did with its runas block - and asks only when there is really something left to close.
 note=Dragging the launch window by its title bar is smooth. It was being repositioned from inside Windows' own move loop, which lands between two of the OS's own move updates and offsets the next frame - and the resize and the re-centre went out as two calls, so the frame in between had the new height and the old top edge. One call now, and nothing at all while a drag is running. Once you have placed the window, the card keeps your top edge instead of sliding back to the middle of the screen.
 note=The launch window no longer changes height after it appears. It used to open 25 px taller than the chooser it turned into and contract the moment the scan landed, and because everything in the card is anchored to its bottom edge, what you saw was the footer band sliding upward under the pointer. It opens at the height it will rest at, so the scan and the result both ask for what the window already is.
