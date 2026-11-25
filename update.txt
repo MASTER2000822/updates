@@ -3,11 +3,12 @@ lamborgini-update 1
 version=3.0.45
 min=3.0.10
 file=LamborGini.exe
-sha256=a2b8ac8bbb2137905c3a413f3ea62f41a34f74de3bca0008e404a3b83ab4ddab
-size=23357440
+sha256=0923f1b8a8e5b65fc1cda132b494d52e7ae588a8855ba269b042df86cdd48d5d
+size=23359488
 retired=23358464:ac462e55c3fd25d160b2ddf9ff538e86f76660c1610533cd9c4a57bd56690971
 retired=31103488:16a62cf35267d416c6aef26df4c4242153834e96d7d665a157957cde8eafff70
 retired=23350784:2d6b58ecc9cc89619ed8e55d195ca712181061eba89cc86e2b3166b2d1a33455
+note=With no GameLoop engine installed, the Device page hides its tabs and shows a clear not-installed plate instead.
 note=The launch window now carries the tool's own logo in its title bar.
 note=It finishes with a care pass: the background helper is verified and repaired on the spot when it went missing.
 note=Updates are offered right there: one glassy prompt with Yes and Not now, and the download shows its progress in the same window.
