@@ -1,14 +1,21 @@
 lamborgini-update 1
 
-version=3.0.49
+version=3.0.50
 min=3.0.10
 file=LamborGini.exe
-sha256=cb898d91f9db36319bcf03b26d59233b5a4b60e6e597a071cfc3bd8b4639973d
-size=23428608
+sha256=d317c337fd0e025e604caa69d5964da1bce62e0eb32b7bc19d93f9dc7537d2cf
+size=23437824
+retired=23428608:cb898d91f9db36319bcf03b26d59233b5a4b60e6e597a071cfc3bd8b4639973d
 retired=23417344:dbad9dc972f6725543e929250398f6e5d1623c424298ba7e4d2f4e0594629c8c
 retired=23358464:ac462e55c3fd25d160b2ddf9ff538e86f76660c1610533cd9c4a57bd56690971
 retired=31103488:16a62cf35267d416c6aef26df4c4242153834e96d7d665a157957cde8eafff70
 retired=23350784:2d6b58ecc9cc89619ed8e55d195ca712181061eba89cc86e2b3166b2d1a33455
+note=Preferences now appears in Device whenever anything of GameLoop is left on the machine, not only when the emulator is installed. The page used to be gated on a scan that can only see an emulator it can still launch, which is exactly backwards for a repair page: when GameLoop is half-uninstalled - its services still registered, its keys still in the registry, a TxGameAssistant folder still on D: - the scan found nothing and the page hid the one plate that could have cleaned it up. A trace of either engine, classic or the new Android 13 one, is now enough, and the other four tabs still need a real install.
+note=Close Emulator stops the Tensafe driver as well. It had been leaving it running while ending tensafe_1.exe and tensafe_2.exe by name, and a kill cannot hold while the service that starts those two is still up - which is why they were back a minute after a close that had counted them as closed.
+note=Close Emulator also waits out a service that restarts itself. Windows applies a service's recovery action when its process dies rather than when it is stopped, and the close ends QMEmulatorService.exe by name, so a close that raced its own stop could leave a service that reappeared a few seconds later with the card already saying closed. It now re-checks for about two seconds and stops it again, and a service still up after that is named in the card instead of being counted as closed.
+note=Purge emulator really stops the services before deleting them. It was waiting eight seconds for each one to stop without ever asking it to, and DeleteService only marks a service for deletion - so a running service kept running, kept its folder locked, and the log said removed.
+note=Purge emulator removes the desktop and Start menu shortcuts again. The shortcut reader used COM on a worker thread that had never initialised it, so every target read as empty and the log said zero removed over a desktop full of them.
+note=The re-scan arrow on the launch card is only the arrow now. It used to sit in a small grey glass key - a shadow, a rim, a lit top edge and a dark floor at a quarter of the size of the buttons below it - which at 26 pixels read as a box with an arrow lost inside it. Pressing it now turns the arrow a full circle and closes its gap into a ring before the scan starts, instead of swapping the card between two frames.
 note=The Executables page no longer comes up blank when winget cannot be read. It had three faults on that one screen: a scan that failed skipped building the App Library too, so the whole page - a fixed list of installers that does not need winget at all - was one red sentence on a black field; and the parser looked for the literal word "Name" to find its columns, which is not there on a French, Russian, Chinese or Turkish Windows, and is spelled next to "ID" rather than "Id" on German.
 note=The columns are now found by their positions rather than their text, so the page reads winget's table in any language, and the header is located by the dash rule under it instead of by a word.
 note=When winget is missing - it is App Installer, an MSIX package from the Store, and plenty of Windows 10 machines have no Store at all - the list is built from the uninstall entries Windows already keeps: name, version, publisher and icon, each card marked "Installed by hand" because nothing in that half can check for an update. One amber line above the grid says where the list came from.
