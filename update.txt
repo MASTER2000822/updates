@@ -1,15 +1,18 @@
 lamborgini-update 1
 
-version=3.0.50
+version=3.0.51
 min=3.0.10
 file=LamborGini.exe
-sha256=d317c337fd0e025e604caa69d5964da1bce62e0eb32b7bc19d93f9dc7537d2cf
-size=23437824
+sha256=60dfae6d6e4174c9a79cb56d6abbe07a9370904e4ec7f1afc49c9ae906dedd62
+size=23438336
+retired=23437824:d317c337fd0e025e604caa69d5964da1bce62e0eb32b7bc19d93f9dc7537d2cf
 retired=23428608:cb898d91f9db36319bcf03b26d59233b5a4b60e6e597a071cfc3bd8b4639973d
 retired=23417344:dbad9dc972f6725543e929250398f6e5d1623c424298ba7e4d2f4e0594629c8c
 retired=23358464:ac462e55c3fd25d160b2ddf9ff538e86f76660c1610533cd9c4a57bd56690971
 retired=31103488:16a62cf35267d416c6aef26df4c4242153834e96d7d665a157957cde8eafff70
 retired=23350784:2d6b58ecc9cc89619ed8e55d195ca712181061eba89cc86e2b3166b2d1a33455
+note=The Cleaning page no longer says it is not running as administrator when it is. That banner was drawn from a flag that is only set at the end of a scan, so on every fresh launch it showed the default value of a bool - over five categories all still marked not scanned, which is the one state it can never be true in, because the build has asked for administrator in its manifest since 3.0.48. If you saw it, nothing was being skipped: the tool was elevated the whole time and the warning was simply wrong.
+note=The Network tab's RIGHTS row is fixed by the same change. It read Standard user until something had been scanned, and now reads Administrator from the moment the tool opens. Elevation cannot change while a process is alive, so it is read once at startup instead of being inferred from whether a job had run yet.
 note=Preferences now appears in Device whenever anything of GameLoop is left on the machine, not only when the emulator is installed. The page used to be gated on a scan that can only see an emulator it can still launch, which is exactly backwards for a repair page: when GameLoop is half-uninstalled - its services still registered, its keys still in the registry, a TxGameAssistant folder still on D: - the scan found nothing and the page hid the one plate that could have cleaned it up. A trace of either engine, classic or the new Android 13 one, is now enough, and the other four tabs still need a real install.
 note=Close Emulator stops the Tensafe driver as well. It had been leaving it running while ending tensafe_1.exe and tensafe_2.exe by name, and a kill cannot hold while the service that starts those two is still up - which is why they were back a minute after a close that had counted them as closed.
 note=Close Emulator also waits out a service that restarts itself. Windows applies a service's recovery action when its process dies rather than when it is stopped, and the close ends QMEmulatorService.exe by name, so a close that raced its own stop could leave a service that reappeared a few seconds later with the card already saying closed. It now re-checks for about two seconds and stops it again, and a service still up after that is named in the card instead of being counted as closed.
