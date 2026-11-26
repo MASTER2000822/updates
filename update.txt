@@ -1,13 +1,19 @@
 lamborgini-update 1
 
-version=3.0.48
+version=3.0.49
 min=3.0.10
 file=LamborGini.exe
-sha256=dbad9dc972f6725543e929250398f6e5d1623c424298ba7e4d2f4e0594629c8c
-size=23417344
+sha256=cb898d91f9db36319bcf03b26d59233b5a4b60e6e597a071cfc3bd8b4639973d
+size=23428608
+retired=23417344:dbad9dc972f6725543e929250398f6e5d1623c424298ba7e4d2f4e0594629c8c
 retired=23358464:ac462e55c3fd25d160b2ddf9ff538e86f76660c1610533cd9c4a57bd56690971
 retired=31103488:16a62cf35267d416c6aef26df4c4242153834e96d7d665a157957cde8eafff70
 retired=23350784:2d6b58ecc9cc89619ed8e55d195ca712181061eba89cc86e2b3166b2d1a33455
+note=The Executables page no longer comes up blank when winget cannot be read. It had three faults on that one screen: a scan that failed skipped building the App Library too, so the whole page - a fixed list of installers that does not need winget at all - was one red sentence on a black field; and the parser looked for the literal word "Name" to find its columns, which is not there on a French, Russian, Chinese or Turkish Windows, and is spelled next to "ID" rather than "Id" on German.
+note=The columns are now found by their positions rather than their text, so the page reads winget's table in any language, and the header is located by the dash rule under it instead of by a word.
+note=When winget is missing - it is App Installer, an MSIX package from the Store, and plenty of Windows 10 machines have no Store at all - the list is built from the uninstall entries Windows already keeps: name, version, publisher and icon, each card marked "Installed by hand" because nothing in that half can check for an update. One amber line above the grid says where the list came from.
+note=When there is nothing at all to show, the page names the failure, repeats winget's own words if it gave any, and offers Try again and Get App Installer, instead of a sentence that read as "this page is broken".
+note=The winget read is bounded by its deadline rather than by end-of-file, so a hung winget can no longer leave the page saying "Reading your programs..." for as long as the tool is open.
 note=LamborGini now asks for administrator when it opens. It used to start as you and raise a prompt at each privileged moment, and on a machine that has GameLoop installed almost every action is one of those - closing the emulator opens its elevated processes and stops its SYSTEM service, setup writes Program Files and System32, drivers start and stop from the Device page, the overlay needs an elevated ETW session. The prompts therefore came constantly, each over a window you had just clicked, and declining one left the tool able to see a problem it could not fix. One prompt at the start, before the window appears, is the quieter arrangement, and it is the one GameLoop's own launcher makes.
 note=The close itself is unchanged and now usually runs in the tool's own process instead of a second copy, because the token is already there. A copy that does not hold it still escalates exactly as before, so nothing about the close depends on this.
 note=Close Emulator now finishes the job. It also unloads GameLoop's background service and its aow_drv driver, which is the pair a machine keeps long after the emulator has gone - aow_drv is boot-start, so it stays loaded until the next reboot and keeps five log files open in the UI folder while it does. A close that could not stop it left the leftover warning on screen for ever, over a driver the button could not touch. Starting the emulator puts the driver back, so nothing is lost by stopping it.
