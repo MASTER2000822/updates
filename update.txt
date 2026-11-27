@@ -1,10 +1,11 @@
 lamborgini-update 1
 
-version=3.0.58
+version=3.0.59
 min=3.0.10
 file=LamborGini.exe
-sha256=54fefd934c7731bdf69be3414820d37a75f5c771fd6a1eecaf131cce3b277fd0
-size=23557120
+sha256=5353b973c9352fec138164fc14aafabdc30b93c7b43cf86c74ad35ff4c4e5d07
+size=28755125
+retired=23557120:54fefd934c7731bdf69be3414820d37a75f5c771fd6a1eecaf131cce3b277fd0
 retired=23557120:55b25b74229579d8032bc75fff43ca449c701cbdb79137c37719746a3c15d067
 retired=23557120:12f890b500e29079ca5a2b057c2fd553c9c20664ce7e466c000abab0cea4d9f3
 retired=23557120:0cf679e2e434a4b0654b2e14185d264b06e7adbd8faf6e4045ecdc964b25cbce
@@ -12,6 +13,10 @@ retired=23549952:439a614455ae6a1953681c84a23b33365550c88a9026c6258e9463e0fc1952d
 retired=23532544:ecbafe3c743b67bd48a7b9eb27abeffe8f811a4647c630e9f6bb5015f6368ceb
 retired=23466496:b3f00da6c605e6115086a29c67ca74f542ae4267e12762b7120305a2e0c0e9bf
 retired=23438336:60dfae6d6e4174c9a79cb56d6abbe07a9370904e4ec7f1afc49c9ae906dedd62
+note=Preferences is four cards now. Each one carries what the tool does, how many steps it takes and whether it is destructive before you tick it, so purging an emulator is not one more line in a list of repairs.
+note=Ticked tools gather in the queue on the right and run in order. The console under it reports every step as it happens, and it can be filtered to warnings or errors, copied, or cleared.
+note=The two jobs that are a setting rather than a procedure - the boost button and the temp folder - sit in a strip under the cards, each with its own action and the folder it works on.
+note=The background helper is linked statically now. On a machine with no compiler runtime in System32 it failed to load, which is what produced the "problem starting LamborGiniHelper.dll" message at logon.
 note=The launch card stays quiet behind another window. A settled card presents at 10 fps with vsync off instead of holding 60 fps, so the graphics engine is no longer pegged while the card sits behind Task Manager.
 note=This build includes the latest frame-loop changes to main.cpp. Focused use, rescanning, hover and window animations still run at full rate.
 note=The rest of the tool is unchanged: the main shell keeps its 30 fps idle pace, and only the settled launch card drops down.
