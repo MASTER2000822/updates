@@ -1,10 +1,10 @@
 lamborgini-update 1
 
-version=3.0.60
+version=3.0.61
 min=3.0.10
 file=LamborGini.exe
-sha256=a5e3b2dcf07082b79ca45564ace900b8f60aef21fb958c38d4c0b32bbb890153
-size=28782013
+sha256=c0e725abb0af9a5ea06342f00c7d052073ae7324770b4c7caf086805822a6cee
+size=28792102
 retired=28755125:5353b973c9352fec138164fc14aafabdc30b93c7b43cf86c74ad35ff4c4e5d07
 retired=23557120:54fefd934c7731bdf69be3414820d37a75f5c771fd6a1eecaf131cce3b277fd0
 retired=23557120:55b25b74229579d8032bc75fff43ca449c701cbdb79137c37719746a3c15d067
@@ -20,6 +20,11 @@ retired=23417344:dbad9dc972f6725543e929250398f6e5d1623c424298ba7e4d2f4e0594629c8
 retired=23358464:ac462e55c3fd25d160b2ddf9ff538e86f76660c1610533cd9c4a57bd56690971
 retired=31103488:16a62cf35267d416c6aef26df4c4242153834e96d7d665a157957cde8eafff70
 retired=23350784:2d6b58ecc9cc89619ed8e55d195ca712181061eba89cc86e2b3166b2d1a33455
+retired=28782013:a5e3b2dcf07082b79ca45564ace900b8f60aef21fb958c38d4c0b32bbb890153
+note=Purge now removes every Tencent folder and Tencent registry key, not only the ones with GameLoop's name in them. That was the trace that survived: AppData\Tencent, ProgramData\Tencent and the QQ key.
+note=If Disable GameLoop Updates is on, Purge lifts it first. That block write-locks the folders GameLoop installs into, and they could not be deleted while it was on.
+note=The console names what each shared Tencent folder held before it goes, so a purge is never silent about taking another Tencent program's data with it.
+note=The last step now asks the question you ask - is there a Tencent folder left - instead of only checking the folders it chose to delete, so it can no longer say complete while one is still there.
 note=Preferences can now disable GameLoop updates. One row in the strip under the cards blocks the 7.x build from starting, removes its service, write-locks the folders it installs into and disables the classic updater - and the same row turns all of it back off.
 note=It reads the machine rather than remembering a setting, so if you blocked updates by hand before, the row already says Unblock and tells you which of the four are in place.
 note=Preferences is four cards now. Each one carries what the tool does, how many steps it takes and whether it is destructive before you tick it, so purging an emulator is not one more line in a list of repairs.
