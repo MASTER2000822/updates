@@ -1,16 +1,21 @@
 lamborgini-update 1
 
-version=3.0.51
+version=3.0.52
 min=3.0.10
 file=LamborGini.exe
-sha256=60dfae6d6e4174c9a79cb56d6abbe07a9370904e4ec7f1afc49c9ae906dedd62
-size=23438336
+sha256=b3f00da6c605e6115086a29c67ca74f542ae4267e12762b7120305a2e0c0e9bf
+size=23466496
+retired=23438336:60dfae6d6e4174c9a79cb56d6abbe07a9370904e4ec7f1afc49c9ae906dedd62
 retired=23437824:d317c337fd0e025e604caa69d5964da1bce62e0eb32b7bc19d93f9dc7537d2cf
 retired=23428608:cb898d91f9db36319bcf03b26d59233b5a4b60e6e597a071cfc3bd8b4639973d
 retired=23417344:dbad9dc972f6725543e929250398f6e5d1623c424298ba7e4d2f4e0594629c8c
 retired=23358464:ac462e55c3fd25d160b2ddf9ff538e86f76660c1610533cd9c4a57bd56690971
 retired=31103488:16a62cf35267d416c6aef26df4c4242153834e96d7d665a157957cde8eafff70
 retired=23350784:2d6b58ecc9cc89619ed8e55d195ca712181061eba89cc86e2b3166b2d1a33455
+note=The Diagnosis page has a language plate in the empty space under the boot actions. Pick English or العربية, press Save, and the choice is written to the Windows registry under HKCU\Software\LamborGini. It is Arabic from the next launch, without touching any file beside the exe.
+note=Restore puts the preview back to the last saved language. Selecting a language only previews it - the status dot says Unsaved change until Save is pressed, so you can look at both before deciding.
+note=Arabic is shaped and joined, not shown as loose letters. The four presentation forms per letter come from the FarsiType source you supplied; the reversible-text walk in that source could not be used on a UTF-8 draw list, so joining and the lam-alef ligatures are decided here. The embedded Calibri already carried the glyphs.
+note=Translation is applied where text is rasterised, not by replacing the page literals. The sidebar, page titles, diagnosis rows, hints and buttons still compare their original English strings for command lookup, so switching language cannot break a tab id or a registry key.
 note=The Cleaning page no longer says it is not running as administrator when it is. That banner was drawn from a flag that is only set at the end of a scan, so on every fresh launch it showed the default value of a bool - over five categories all still marked not scanned, which is the one state it can never be true in, because the build has asked for administrator in its manifest since 3.0.48. If you saw it, nothing was being skipped: the tool was elevated the whole time and the warning was simply wrong.
 note=The Network tab's RIGHTS row is fixed by the same change. It read Standard user until something had been scanned, and now reads Administrator from the moment the tool opens. Elevation cannot change while a process is alive, so it is read once at startup instead of being inferred from whether a job had run yet.
 note=Preferences now appears in Device whenever anything of GameLoop is left on the machine, not only when the emulator is installed. The page used to be gated on a scan that can only see an emulator it can still launch, which is exactly backwards for a repair page: when GameLoop is half-uninstalled - its services still registered, its keys still in the registry, a TxGameAssistant folder still on D: - the scan found nothing and the page hid the one plate that could have cleaned it up. A trace of either engine, classic or the new Android 13 one, is now enough, and the other four tabs still need a real install.
