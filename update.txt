@@ -1,12 +1,16 @@
 lamborgini-update 1
 
-version=3.0.53
+version=3.0.54
 min=3.0.10
 file=LamborGini.exe
-sha256=ecbafe3c743b67bd48a7b9eb27abeffe8f811a4647c630e9f6bb5015f6368ceb
-size=23532544
+sha256=439a614455ae6a1953681c84a23b33365550c88a9026c6258e9463e0fc1952d4
+size=23549952
+retired=23532544:ecbafe3c743b67bd48a7b9eb27abeffe8f811a4647c630e9f6bb5015f6368ceb
 retired=23466496:b3f00da6c605e6115086a29c67ca74f542ae4267e12762b7120305a2e0c0e9bf
 retired=23438336:60dfae6d6e4174c9a79cb56d6abbe07a9370904e4ec7f1afc49c9ae906dedd62
+note=Preferences now appears for leftovers from either emulator. A plain Tencent folder under AppData, GL File Manager, a service, a shortcut, an uninstall row or a startup entry is enough - no launchable install is required.
+note=Detection is much wider for both TAC and classic GameLoop: common folders on every fixed drive, registry keys, services by name and ImagePath, processes, uninstall entries, Start Menu and desktop shortcuts, Run values and firewall rules.
+note=This pass only shows the tab. Purge still deletes by exact TAC roots and classic folder names, so other Tencent programs are not taken with it.
 note=Purge emulator now removes TAC, the new Android 13 GameLoop, as well as the classic emulator. It closes TAC first, then deletes its services and drivers, Windows entries, registry keys, shortcuts, Android image and every game in it.
 note=The TAC half is the emulator-only part of the uninstaller you supplied, rewritten natively in C++. Nothing is embedded and no cmd.exe or PowerShell runs.
 note=TAC is matched by its own GameLoop / GameLoopData / Androws folders under a Tencent parent, or by a registry path that carries TAC's launcher, image or app folder. Classic markers refuse a folder, so another emulator is not taken.
