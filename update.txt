@@ -1,18 +1,19 @@
 lamborgini-update 1
 
-version=3.0.56
+version=3.0.57
 min=3.0.10
 file=LamborGini.exe
-sha256=12f890b500e29079ca5a2b057c2fd553c9c20664ce7e466c000abab0cea4d9f3
+sha256=55b25b74229579d8032bc75fff43ca449c701cbdb79137c37719746a3c15d067
 size=23557120
+retired=23557120:12f890b500e29079ca5a2b057c2fd553c9c20664ce7e466c000abab0cea4d9f3
 retired=23557120:0cf679e2e434a4b0654b2e14185d264b06e7adbd8faf6e4045ecdc964b25cbce
 retired=23549952:439a614455ae6a1953681c84a23b33365550c88a9026c6258e9463e0fc1952d4
 retired=23532544:ecbafe3c743b67bd48a7b9eb27abeffe8f811a4647c630e9f6bb5015f6368ceb
 retired=23466496:b3f00da6c605e6115086a29c67ca74f542ae4267e12762b7120305a2e0c0e9bf
 retired=23438336:60dfae6d6e4174c9a79cb56d6abbe07a9370904e4ec7f1afc49c9ae906dedd62
-note=The launch card no longer pegs the graphics engine while LamborGini sits behind another window. Once its scan has settled, an unfocused window presents at 10 fps with vsync off instead of 60 fps locked to the display.
-note=A settled card now tells the frame pacer it has no motion. Rescanning, hovering, page animations and window tweens still run at full rate; only a still card left in the background drops down.
-note=Focus is checked before launch-card motion, so returning to the tool does not leave it stuck at the idle pace. Window animations still finish even when the focus has already moved away.
+note=The launch card no longer pegs the graphics engine when it sits behind another window. Once its scan has settled, that card presents at 10 fps with vsync off instead of 60 fps locked to the display.
+note=The main shell keeps its original 30 fps idle pace - the lower background rate is only for the launch card. Rescanning, hovering, page animations and window tweens still run at full rate.
+note=A settled card now tells the frame pacer it has no motion, and focus is checked separately, so returning to the tool never leaves it stuck at the idle pace. Window animations still finish after focus moves away.
 note=Purge now removes the TAC residue left inside the shared Tencent folder: the Androws beacon database and config, DeskUpdate, DtConfig, qimei and TDSData. GL File Manager folders are removed too.
 note=A second purge no longer skips TAC just because its service is gone. If those exact leftovers remain, the TAC phase still runs and clears them.
 note=Shared Tencent parents are only removed when empty. Other Tencent programs' folders are not in the cleanup list.
