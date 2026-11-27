@@ -1,10 +1,10 @@
 lamborgini-update 1
 
-version=3.0.68
+version=3.0.69
 min=3.0.10
 file=LamborGhini.exe
-sha256=6b1b71993330276f76ee557b522ceb8e75b26b6000ee7abafe9fd4e82618ba9e
-size=28843683
+sha256=63b02c804bae49208bb78119f43503bc2d27c86937f5d9a8b3a54c6474b75cfd
+size=28847285
 retired=28755125:5353b973c9352fec138164fc14aafabdc30b93c7b43cf86c74ad35ff4c4e5d07
 retired=23557120:54fefd934c7731bdf69be3414820d37a75f5c771fd6a1eecaf131cce3b277fd0
 retired=23557120:55b25b74229579d8032bc75fff43ca449c701cbdb79137c37719746a3c15d067
@@ -28,6 +28,11 @@ retired=28827347:7db29d2a8c355d2cf192035ae8bc49d5d5cae1e25a445762b64d25527240394
 retired=28826946:c779917081022846940526b00781c7035688aaacef26a7b9dfede59d3b1c429e
 retired=28827613:79d1d3b0c3a7db5165fd6bc086d5372952ff25a08fe4ace6a5b53e6cbb327b2f
 retired=28841573:3486cb6b338fe48e022e1a97905fa34ccd74ad22a9e826a2ae44196d2dbf48c6
+retired=28843683:6b1b71993330276f76ee557b522ceb8e75b26b6000ee7abafe9fd4e82618ba9e
+note=The install path on the launch card is readable again. Its last line was being sliced 22 px above the card's bottom edge, and only looked right while the card was lifted by the cursor.
+note=The Optimise page is for the classic GameLoop only. A machine running the TAC emulator now says so, instead of showing a card whose two buttons could only fail.
+note=The full-screen progress screen names the job you pressed: Optimising for other versions, Optimising for Korea, or Optimising the UI for CN Interface. It used to call the first one Korea.
+note=An English GameLoop gets a new control on the Optimise card: CN Interface, beside the install line. It puts the Chinese build's interface in place of the English one, and Restore to default brings the English files back.
 note=An English GameLoop gets a new control on the Optimise card: CN Interface, beside the install line. It puts the Chinese build's interface in place of the English one.
 note=It is the same job Optimise for other versions runs - same download, same check, same folder - so Restore to default brings the English files back exactly as before.
 note=The card's foot says Chinese while it is in place, so you can tell which interface the folder holds without opening GameLoop.
