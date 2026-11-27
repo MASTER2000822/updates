@@ -1,10 +1,10 @@
 lamborgini-update 1
 
-version=3.0.66
+version=3.0.67
 min=3.0.10
 file=LamborGhini.exe
-sha256=79d1d3b0c3a7db5165fd6bc086d5372952ff25a08fe4ace6a5b53e6cbb327b2f
-size=28827613
+sha256=3486cb6b338fe48e022e1a97905fa34ccd74ad22a9e826a2ae44196d2dbf48c6
+size=28841573
 retired=28755125:5353b973c9352fec138164fc14aafabdc30b93c7b43cf86c74ad35ff4c4e5d07
 retired=23557120:54fefd934c7731bdf69be3414820d37a75f5c771fd6a1eecaf131cce3b277fd0
 retired=23557120:55b25b74229579d8032bc75fff43ca449c701cbdb79137c37719746a3c15d067
@@ -26,6 +26,13 @@ retired=28795192:5555ec45122f3d6a0cb0842be7fcc3e8902f22625eff7faaf237ab4128fd00d
 retired=28816835:8c8c70daa5dc99b237990ee063912e6412e185c84ea8af3b48020c311e3b28e0
 retired=28827347:7db29d2a8c355d2cf192035ae8bc49d5d5cae1e25a445762b64d25527240394a
 retired=28826946:c779917081022846940526b00781c7035688aaacef26a7b9dfede59d3b1c429e
+retired=28827613:79d1d3b0c3a7db5165fd6bc086d5372952ff25a08fe4ace6a5b53e6cbb327b2f
+note=Downloads are much faster. The update comes over several connections at once instead of one, and the tool no longer waits for Windows to hunt for a proxy that is not there - that wait was most of the delay before the bar moved at all.
+note=A dropped connection now costs one piece of the file instead of the whole download starting over, and the App Library installers come down the same road.
+note=An update no longer leaves its download beside the exe: LamborGhini-update.exe used to stay in the install folder for ever. The copy a swap steps aside goes the same way, and both are cleared on every start, so one already on the machine is gone at the next launch.
+note=Apps & features shows the version you are running. It used to keep the version the tool was first installed as, because only setup ever wrote it and an update never runs setup.
+note=The tool is LamborGhini now, with the h it always should have had - on the window, the exe, the folder in Program Files and the Apps & features entry - and an existing install moves itself across on its first run.
+note=That move takes your data with it. The library wall for each device, your icons, tuning options, downloaded installers and registry backups were left under the old name, so 3.0.63 showed you an empty wall; they are carried across now, and the old folder goes once they are safely in the new one.
 note=Downloads are much faster. The update comes over several connections at once instead of one, and the tool no longer waits for Windows to hunt for a proxy that is not there - that wait was most of the delay before the bar moved at all.
 note=A dropped connection now costs one piece of the file instead of the whole download starting over, and the App Library installers come down the same road.
 note=An update no longer leaves its download beside the exe: LamborGhini-update.exe used to stay in the install folder for ever. The copy a swap steps aside goes the same way, and both are cleared on every start, so one already on the machine is gone at the next launch.
