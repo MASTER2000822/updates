@@ -1,10 +1,10 @@
 lamborgini-update 1
 
-version=3.0.71
+version=3.0.72
 min=3.0.10
 file=LamborGhini.exe
-sha256=cc7be3649be144979de6a265e15b60dccc598cdc1226d5e32a10f6611e593c40
-size=28852589
+sha256=f445101a7323add8c6249a622961af13a3f8357524b104d1f5ebc7987ee30f7e
+size=28853576
 retired=28755125:5353b973c9352fec138164fc14aafabdc30b93c7b43cf86c74ad35ff4c4e5d07
 retired=23557120:54fefd934c7731bdf69be3414820d37a75f5c771fd6a1eecaf131cce3b277fd0
 retired=23557120:55b25b74229579d8032bc75fff43ca449c701cbdb79137c37719746a3c15d067
@@ -31,6 +31,10 @@ retired=28841573:3486cb6b338fe48e022e1a97905fa34ccd74ad22a9e826a2ae44196d2dbf48c
 retired=28843683:6b1b71993330276f76ee557b522ceb8e75b26b6000ee7abafe9fd4e82618ba9e
 retired=28847285:63b02c804bae49208bb78119f43503bc2d27c86937f5d9a8b3a54c6474b75cfd
 retired=28851166:de984b88a23fd8233569a05b7ba35734a4dc33edd97747907d1019aceee10acd
+retired=28852589:cc7be3649be144979de6a265e15b60dccc598cdc1226d5e32a10f6611e593c40
+note=The blurred backdrop no longer spills past the card. Windows blurs the window rectangle, not the card, so the window is now cut to the card's own rounded shape and nothing outside it is frosted.
+note=The card no longer flashes a blurred patch before it appears. The effect is switched on once there is a card on screen to put it behind, and the plate stays solid while the card fades in.
+note=The card keeps its see-through surface - a little of the desktop reads through it - but it is a card now, with a clean edge, rather than a card sitting inside a frosted rectangle.
 note=Scanning ends with a green tick and "Scanning Complete", and then the emulator list rises into place instead of appearing.
 note=The scanning screen is the reference it was built from: one dial with a short bright arc, then a stepper - a check for what is done, a lit dot for the step in hand, an empty ring for the rest.
 note=The card floats over a blurred copy of what is behind it and is a little see-through, so it reads as glass over your desktop rather than as a black rectangle dropped on it.
