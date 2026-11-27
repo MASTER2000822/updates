@@ -1,10 +1,10 @@
 lamborgini-update 1
 
-version=3.0.72
+version=3.0.73
 min=3.0.10
 file=LamborGhini.exe
-sha256=f445101a7323add8c6249a622961af13a3f8357524b104d1f5ebc7987ee30f7e
-size=28853576
+sha256=ef2985d6dc3c861587e5ebb28a970cfea2899638db00d1ad68f268c93d57d3bd
+size=28860353
 retired=28755125:5353b973c9352fec138164fc14aafabdc30b93c7b43cf86c74ad35ff4c4e5d07
 retired=23557120:54fefd934c7731bdf69be3414820d37a75f5c771fd6a1eecaf131cce3b277fd0
 retired=23557120:55b25b74229579d8032bc75fff43ca449c701cbdb79137c37719746a3c15d067
@@ -32,6 +32,11 @@ retired=28843683:6b1b71993330276f76ee557b522ceb8e75b26b6000ee7abafe9fd4e82618ba9
 retired=28847285:63b02c804bae49208bb78119f43503bc2d27c86937f5d9a8b3a54c6474b75cfd
 retired=28851166:de984b88a23fd8233569a05b7ba35734a4dc33edd97747907d1019aceee10acd
 retired=28852589:cc7be3649be144979de6a265e15b60dccc598cdc1226d5e32a10f6611e593c40
+retired=28853576:f445101a7323add8c6249a622961af13a3f8357524b104d1f5ebc7987ee30f7e
+note=Old LamborGini copies - the name this tool shipped under until 3.0.63 - are now found and retired. They were previously invisible to the cleaner, so an old copy could sit on the Desktop and still be started beside this one.
+note=Starting an old copy no longer works: it is refused, removed, and this version opens instead - wherever the file is, whichever shortcut started it.
+note=A copy that has been renamed is caught too. The cleaner now recognises the old tool by what is inside the file and by its window title, not just by the file name, so renaming the exe does not hide it.
+note=The launch card's backdrop is solid again. Windows applies that blur to the whole window rather than the card, and no window shape can confine it, so the frosted rectangle around the card is gone for good.
 note=The blurred backdrop no longer spills past the card. Windows blurs the window rectangle, not the card, so the window is now cut to the card's own rounded shape and nothing outside it is frosted.
 note=The card no longer flashes a blurred patch before it appears. The effect is switched on once there is a card on screen to put it behind, and the plate stays solid while the card fades in.
 note=The card keeps its see-through surface - a little of the desktop reads through it - but it is a card now, with a clean edge, rather than a card sitting inside a frosted rectangle.
