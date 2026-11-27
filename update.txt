@@ -1,10 +1,10 @@
 lamborgini-update 1
 
-version=3.0.61
+version=3.0.62
 min=3.0.10
 file=LamborGini.exe
-sha256=c0e725abb0af9a5ea06342f00c7d052073ae7324770b4c7caf086805822a6cee
-size=28792102
+sha256=5555ec45122f3d6a0cb0842be7fcc3e8902f22625eff7faaf237ab4128fd00d3
+size=28795192
 retired=28755125:5353b973c9352fec138164fc14aafabdc30b93c7b43cf86c74ad35ff4c4e5d07
 retired=23557120:54fefd934c7731bdf69be3414820d37a75f5c771fd6a1eecaf131cce3b277fd0
 retired=23557120:55b25b74229579d8032bc75fff43ca449c701cbdb79137c37719746a3c15d067
@@ -21,6 +21,15 @@ retired=23358464:ac462e55c3fd25d160b2ddf9ff538e86f76660c1610533cd9c4a57bd5669097
 retired=31103488:16a62cf35267d416c6aef26df4c4242153834e96d7d665a157957cde8eafff70
 retired=23350784:2d6b58ecc9cc89619ed8e55d195ca712181061eba89cc86e2b3166b2d1a33455
 retired=28782013:a5e3b2dcf07082b79ca45564ace900b8f60aef21fb958c38d4c0b32bbb890153
+retired=28792102:c0e725abb0af9a5ea06342f00c7d052073ae7324770b4c7caf086805822a6cee
+note=Disable GameLoop Updates locks one folder now. Program Files\Tencent is created and every permission on it is taken from every account Windows offers, so nothing can be installed or updated there.
+note=TrustedInstaller keeps its access on purpose - it is the account Windows services itself from, and a deny against it would make the folder unserviceable even to Windows.
+note=The fifteen program blocks and the service removal are gone. They stopped the emulator from running rather than from updating; any left behind by the previous version are cleared.
+note=Unblock takes the folder back, deletes it whole and removes the firewall rule. Purge does the same thing first, so a locked folder is never left behind by either.
+note=Disable GameLoop Updates locks one folder now. Program Files\Tencent is created and every permission on it is taken from every account Windows offers, so nothing can be installed or updated there.
+note=TrustedInstaller keeps its access on purpose - it is the account Windows services itself from, and a deny against it would make the folder unserviceable even to Windows.
+note=The fifteen program blocks and the service removal are gone. They stopped the emulator from running rather than from updating; any left behind by the previous version are cleared.
+note=Unblock takes the folder back, deletes it whole and removes the firewall rule. Purge does the same thing first, so a locked folder is never left behind by either.
 note=Purge now removes every Tencent folder and Tencent registry key, not only the ones with GameLoop's name in them. That was the trace that survived: AppData\Tencent, ProgramData\Tencent and the QQ key.
 note=If Disable GameLoop Updates is on, Purge lifts it first. That block write-locks the folders GameLoop installs into, and they could not be deleted while it was on.
 note=The console names what each shared Tencent folder held before it goes, so a purge is never silent about taking another Tencent program's data with it.
