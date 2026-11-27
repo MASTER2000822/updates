@@ -1,10 +1,10 @@
 lamborgini-update 1
 
-version=3.0.64
+version=3.0.65
 min=3.0.10
 file=LamborGhini.exe
-sha256=7db29d2a8c355d2cf192035ae8bc49d5d5cae1e25a445762b64d25527240394a
-size=28827347
+sha256=c779917081022846940526b00781c7035688aaacef26a7b9dfede59d3b1c429e
+size=28826946
 retired=28755125:5353b973c9352fec138164fc14aafabdc30b93c7b43cf86c74ad35ff4c4e5d07
 retired=23557120:54fefd934c7731bdf69be3414820d37a75f5c771fd6a1eecaf131cce3b277fd0
 retired=23557120:55b25b74229579d8032bc75fff43ca449c701cbdb79137c37719746a3c15d067
@@ -24,6 +24,11 @@ retired=28782013:a5e3b2dcf07082b79ca45564ace900b8f60aef21fb958c38d4c0b32bbb89015
 retired=28792102:c0e725abb0af9a5ea06342f00c7d052073ae7324770b4c7caf086805822a6cee
 retired=28795192:5555ec45122f3d6a0cb0842be7fcc3e8902f22625eff7faaf237ab4128fd00d3
 retired=28816835:8c8c70daa5dc99b237990ee063912e6412e185c84ea8af3b48020c311e3b28e0
+retired=28827347:7db29d2a8c355d2cf192035ae8bc49d5d5cae1e25a445762b64d25527240394a
+note=Downloads are much faster. The update comes over several connections at once instead of one, and the tool no longer waits for Windows to hunt for a proxy that is not there - that wait was most of the delay before the bar moved at all.
+note=A dropped connection now costs one piece of the file instead of the whole download starting over, and the App Library installers come down the same road.
+note=An update no longer leaves its download beside the exe: LamborGhini-update.exe used to stay in the install folder for ever. The copy a swap steps aside goes the same way, and both are cleared on every start, so one already on the machine is gone at the next launch.
+note=The tool is LamborGhini now, with the h it always should have had - on the window, the exe, the folder in Program Files and the Apps & features entry - and an existing install moves itself across on its first run.
 note=Downloads are much faster. The update comes over several connections at once instead of one, and the tool no longer waits for Windows to hunt for a proxy that is not there - that wait was most of the delay before the bar moved at all.
 note=A dropped connection now costs one piece of the file instead of the whole download starting over, and the App Library installers come down the same road.
 note=An update no longer leaves its download beside the exe: LamborGhini-update.exe used to stay in the install folder for ever. The copy a swap steps aside goes the same way, and both are cleared on every start, so one already on the machine is gone at the next launch.
