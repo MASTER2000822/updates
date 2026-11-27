@@ -1,4 +1,4 @@
-# LamborGini App Library - installers hosted on the update channel.
+# LamborGhini App Library - installers hosted on the update channel.
 # One record per catalogue id; the tool downloads exe/<file> and checks
 # the SHA-256 and the size before it runs anything.
 
