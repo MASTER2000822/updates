@@ -1,10 +1,10 @@
 lamborgini-update 1
 
-version=3.0.76
+version=3.0.77
 min=3.0.10
 file=LamborGhini.exe
-sha256=a484c2e0f87767e9b7c8181c2405eeaa0660731b8db39cf8f9a81b9039e8fef8
-size=31974595
+sha256=ccca3ce6988f55af1277134136423031f11e5dcf6e4842d1df7a80805b7b3365
+size=31971978
 retired=28755125:5353b973c9352fec138164fc14aafabdc30b93c7b43cf86c74ad35ff4c4e5d07
 retired=23557120:54fefd934c7731bdf69be3414820d37a75f5c771fd6a1eecaf131cce3b277fd0
 retired=23557120:55b25b74229579d8032bc75fff43ca449c701cbdb79137c37719746a3c15d067
@@ -36,6 +36,8 @@ retired=28853576:f445101a7323add8c6249a622961af13a3f8357524b104d1f5ebc7987ee30f7
 retired=28860353:ef2985d6dc3c861587e5ebb28a970cfea2899638db00d1ad68f268c93d57d3bd
 retired=31973973:3c585f8cba50db99cd37732004f5d9e82319bc71d91a956f60071e137924b841
 retired=31974083:ab43c652ecc7bdabb20a8608237a966ab2047062630de13c6e7a4bb58a9dba11
+retired=31974595:a484c2e0f87767e9b7c8181c2405eeaa0660731b8db39cf8f9a81b9039e8fef8
+note=Fixed some bugs and issue
 note=The last row of posters in App Library fades into the fold instead of ending in a razor cut, so it reads as a list that continues.
 note=Fixed some bugs and issues.
 note=The Optimise card's bottom edge is drawn again - its border and both rounded corners - and the same cut is gone from every other page.
